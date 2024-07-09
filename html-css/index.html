@@ -3,11 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Alura HTML/CSS Portfolio</title>
   </head>
   <body>
-    <header></header>
+    <header class="header">
+      <nav class="header__menu">
+        <a class="header__menu__link" href="./index.html">Home</a>
+        <a class="header__menu__link" href="./about.html">Sobre mí</a>
+      </nav>
+    </header>
+
     <main class="presentacion">
       <section class="presentacion__contenido">
         <h1 class="presentacion__contenido__titulo">
@@ -21,20 +27,29 @@
           cabo buenas ideas. ¿Hablamos?
         </p>
         <div class="presentacion__enlaces">
+          <h2 class="presentacion__enlaces__subtitulo">Accede a mis redes:</h2>
           <a
             class="presentacion__enlaces__link"
             href="https://www.linkedin.com/in/romanrios/"
-            >LinkedIn</a
+            target="_blank"
+          >
+            <img src="./assets/linkedin.png" alt="LinkedIn" />
+            LinkedIn</a
           >
           <a
             class="presentacion__enlaces__link"
             href="https://www.github.com/romanrios"
-            >GitHub</a
+            target="_blank"
+          >
+            <img src="./assets/github.png" alt="GitHub" />
+            GitHub</a
           >
         </div>
       </section>
-      <img src="foto_roman.png" alt="Foto de Román Ríos" />
+      <img src="./assets/foto_roman.png" alt="Foto de Román Ríos" />
     </main>
-    <footer></footer>
+    <footer class="footer">
+      <p>2024 | Desarrollado por Román Ríos</p>
+    </footer>
   </body>
 </html>
