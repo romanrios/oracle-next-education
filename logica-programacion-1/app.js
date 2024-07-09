@@ -1,8 +1,8 @@
-let numeroMaximoPosible = 50;
+let numeroMaximoPosible = 10;
 let numeroSecreto = Math.ceil(Math.random() * numeroMaximoPosible);
 let numeroUsuario;
 let intentos = 0;
-let maximosIntentos = 3;
+let maximosIntentos = 5;
 
 while (numeroUsuario != numeroSecreto) {
   numeroUsuario = parseInt(
