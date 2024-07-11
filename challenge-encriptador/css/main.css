@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+@import url(./reset.css);
+@import url(./variables.css);
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--light-blue-100);
+  display: flex;
+  min-height: 100vh;
+  padding: 2.5rem;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  width: 7.5rem;
+  background-color: aquamarine;
+}
+
+.header__logo {
+  width: 1.95rem;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+}
+
+.main__input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(170, 197, 36);
+}
+
+#main__input__textarea {
+  resize: none;
+  width: 100% !important;
+}
+
+.main__output {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  background-color: rgb(238, 130, 116);
+}
