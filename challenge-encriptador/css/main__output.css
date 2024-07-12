@@ -31,3 +31,25 @@
   text-align: center;
   line-height: 150%;
 }
+
+.result__text {
+  font-size: 1.5rem;
+  color: var(--gray-400);
+  height: 100%;
+  word-break: break-all;
+}
+
+.result__button {
+  font-size: 1rem;
+  width: 20.5rem;
+  padding: 1.5rem;
+  background-color: transparent;
+  border-radius: 1.5rem;
+  color: var(--dark-blue-300);
+  transition: background-color 0.2s ease-in;
+  border: solid 1px var(--dark-blue-300);
+}
+
+.result__button:hover {
+  cursor: pointer;
+}

@@ -20,6 +20,10 @@
   background-color: transparent;
 }
 
+#main__input__textarea::placeholder {
+  color: var(--dark-blue-300);
+}
+
 .main__input__info {
   color: var(--gray-400);
   display: flex;
