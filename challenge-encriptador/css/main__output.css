@@ -1,0 +1,33 @@
+.main__output {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  background-color: white;
+  border-radius: 2rem;
+  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.main__output__text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.main__output__message {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--gray-500);
+  line-height: 120%;
+}
+
+.main__output__info {
+  font-size: 1rem;
+  color: var(--gray-500);
+  text-align: center;
+  line-height: 150%;
+}

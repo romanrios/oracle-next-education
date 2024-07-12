@@ -1,0 +1,25 @@
+@import url(./reset.css);
+
+body {
+  background-color: rgb(141, 146, 165);
+  min-height: 100vh;
+  max-width: 1000px;
+}
+
+.parent {
+  display: flex;
+  justify-content: center;
+  border: 1px blue solid;
+}
+
+.child {
+  width: 100px;
+  border: 1px solid red;
+  text-align: center;
+}
+
+.child2 {
+  width: 200px;
+  border: 1px solid red;
+  text-align: center;
+}

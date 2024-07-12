@@ -2,6 +2,8 @@
 
 @import url(./reset.css);
 @import url(./variables.css);
+@import url(./main__input.css);
+@import url(./main__output.css);
 
 body {
   font-family: var(--font-primary);
@@ -9,14 +11,17 @@ body {
   display: flex;
   min-height: 100vh;
   padding: 2.5rem;
+  justify-content: center;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .header {
   display: flex;
   align-items: baseline;
   justify-content: center;
-  width: 7.5rem;
-  background-color: aquamarine;
+  min-width: 7.5rem;
+  /* background-color: rgba(143, 143, 143, 0.582); */
 }
 
 .header__logo {
@@ -25,28 +30,6 @@ body {
 
 .main {
   display: flex;
-  width: 100%;
-}
-
-.main__input {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background-color: rgb(170, 197, 36);
-}
-
-#main__input__textarea {
-  resize: none;
-  width: 100% !important;
-}
-
-.main__output {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 25rem;
-  background-color: rgb(238, 130, 116);
+  column-gap: 3rem;
+  padding-left: 3rem;
 }

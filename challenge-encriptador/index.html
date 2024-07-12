@@ -18,24 +18,45 @@
           name="message"
           id="main__input__textarea"
         ></textarea>
-        <p>Sólo letras minúsculas y sin acentos</p>
+        <p class="main__input__info">
+          <img
+            class="main__input__icon"
+            src="./images/exclamation-icon.svg"
+            alt="Exclamation icon"
+          />
+
+          Sólo letras minúsculas y sin acentos
+        </p>
         <div class="main__input__buttons">
-          <button>Encriptar</button>
-          <button>Desencriptar</button>
+          <button
+            onclick="showResultEncrypt()"
+            class="main__input__button-encrypt"
+          >
+            Encriptar
+          </button>
+          <button
+            onclick="showResultDecrypt()"
+            class="main__input__button-decrypt"
+          >
+            Desencriptar
+          </button>
         </div>
       </section>
-      <section class="main__output">
+      <section class="main__output" id="main__output">
         <img
           class="main__output__image"
           src="./images/searching-character.svg"
           alt="Searching character"
         />
-        <p class="main__output__message">Ningún mensaje fue encontrado</p>
-        <p class="main__output__info">
-          Ingresa el mensaje que desees encriptar o desencriptar
-        </p>
+        <div class="main__output__text-container">
+          <p class="main__output__message">Ningún mensaje fue encontrado</p>
+          <p class="main__output__info">
+            Ingresa el texto que desees encriptar o desencriptar
+          </p>
+        </div>
       </section>
     </main>
     <footer class="footer"></footer>
+    <script src="./js/main.js"></script>
   </body>
 </html>
