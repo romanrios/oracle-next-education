@@ -3,7 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 25rem;
+  max-width: 25rem;
+  flex: 1;
   background-color: white;
   border-radius: 2rem;
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.05);
@@ -43,11 +44,13 @@
   outline: none;
   resize: none;
   background-color: transparent;
+  line-height: 1.5;
 }
 
 .result__button {
   font-size: 1rem;
-  width: 20.5rem;
+  width: 100%;
+  max-width: 20.5rem;
   padding: 1.5rem;
   background-color: transparent;
   border-radius: 1.5rem;

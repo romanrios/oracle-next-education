@@ -20,7 +20,9 @@ body {
   display: flex;
   align-items: baseline;
   justify-content: center;
-  min-width: 7.5rem;
+  width: 7.5rem;
+  flex-shrink: 0;
+  background-color: rgb(204, 192, 192);
 }
 
 .header__logo {
@@ -29,6 +31,61 @@ body {
 
 .main {
   display: flex;
+  width: 100%;
   column-gap: 3rem;
   padding-left: 3rem;
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 95%;
+  }
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 900px) {
+  html {
+    font-size: 85%;
+  }
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 65%;
+  }
+}
+
+@media (max-width: 400px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media (max-width: 300px) {
+  html {
+    font-size: 55%;
+  }
 }

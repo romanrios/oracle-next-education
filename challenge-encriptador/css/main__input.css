@@ -1,10 +1,11 @@
 .main__input {
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  /* background-color: rgba(209, 209, 209, 0.767); */
+  background-color: rgba(209, 209, 209, 0.767);
 }
 
 #main__input__textarea {
@@ -18,6 +19,7 @@
   resize: none;
   margin-top: 3rem;
   background-color: transparent;
+  line-height: 1.5;
 }
 
 #main__input__textarea::placeholder {
@@ -39,18 +41,24 @@
 
 .main__input__buttons {
   display: flex;
+  width: 100%;
   gap: 1.5rem;
 }
 
-.main__input__button-encrypt {
+/* common button properties */
+.main__input__buttons button {
   font-size: 1rem;
-  width: 20.5rem;
+  width: 100%;
+  max-width: 20.5rem;
   padding: 1.5rem;
-  background-color: var(--dark-blue-300);
   border-radius: 1.5rem;
-  color: white;
   transition: background-color 0.2s ease-in;
   border: solid 1px var(--dark-blue-300);
+}
+
+.main__input__button-encrypt {
+  background-color: var(--dark-blue-300);
+  color: white;
 }
 
 .main__input__button-encrypt:hover {
@@ -59,14 +67,8 @@
 }
 
 .main__input__button-decrypt {
-  font-size: 1rem;
-  width: 20.5rem;
-  padding: 1.5rem;
   background-color: transparent;
-  border-radius: 1.5rem;
   color: var(--dark-blue-300);
-  transition: background-color 0.2s ease-in;
-  border: solid 1px var(--dark-blue-300);
 }
 
 .main__input__button-decrypt:hover {
