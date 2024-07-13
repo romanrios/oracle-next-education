@@ -21,7 +21,6 @@ body {
   align-items: baseline;
   justify-content: center;
   min-width: 7.5rem;
-  /* background-color: rgba(143, 143, 143, 0.582); */
 }
 
 .header__logo {

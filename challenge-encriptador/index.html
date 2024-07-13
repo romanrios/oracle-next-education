@@ -24,18 +24,17 @@
             src="./images/exclamation-icon.svg"
             alt="Exclamation icon"
           />
-
           Sólo letras minúsculas y sin acentos
         </p>
         <div class="main__input__buttons">
           <button
-            onclick="showResultEncrypt()"
+            onclick="showResult(encrypt,'Mensaje encriptado')"
             class="main__input__button-encrypt"
           >
             Encriptar
           </button>
           <button
-            onclick="showResultDecrypt()"
+            onclick="showResult(decrypt,'Mensaje desencriptado')"
             class="main__input__button-decrypt"
           >
             Desencriptar
@@ -57,6 +56,8 @@
       </section>
     </main>
     <footer class="footer"></footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/dictionary.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
