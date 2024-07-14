@@ -1,0 +1,28 @@
+.footer {
+  margin-bottom: 1rem;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer__text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--gray-300);
+}
+
+.footer__icon {
+  margin-left: 0.7rem;
+  color: var(--gray-300);
+}
+
+.footer__icon__linkedin {
+  font-size: 1.1rem;
+}
+
+.footer__icon:hover {
+  color: var(--dark-blue-500);
+}

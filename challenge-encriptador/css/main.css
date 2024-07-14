@@ -1,19 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-
-@import url(./reset.css);
-@import url(./variables.css);
-@import url(./main__input.css);
-@import url(./main__output.css);
-
 body {
   font-family: var(--font-primary);
   background-color: var(--light-blue-100);
-  display: flex;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  justify-content: center;
+}
+
+.body__container {
+  display: flex;
   padding: 2.5rem;
   justify-content: center;
+  width: 100%;
   max-width: 1440px;
+  max-height: 1200px;
   margin: 0 auto;
+  flex: 1;
 }
 
 .header {
@@ -21,7 +24,6 @@ body {
   align-items: baseline;
   justify-content: center;
   width: 7.5rem;
-  flex-shrink: 0;
 }
 
 .header__logo {
@@ -33,68 +35,4 @@ body {
   width: 100%;
   column-gap: 3rem;
   padding-left: 3rem;
-}
-
-@media (max-width: 1200px) {
-  html {
-    font-size: 95%;
-  }
-}
-
-@media (max-width: 1024px) {
-  html {
-    font-size: 90%;
-  }
-  .main {
-    column-gap: 2rem;
-    padding-left: 2rem;
-  }
-}
-
-@media (max-width: 768px) {
-  html {
-    font-size: 80%;
-  }
-  body {
-    flex-direction: column;
-  }
-  .header {
-    width: 100%;
-    justify-content: left;
-  }
-  .main {
-    flex-direction: column;
-    padding-left: 0;
-    flex: 1;
-  }
-  .main__input {
-    height: fit-content;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  #main__input__textarea {
-    flex: 1;
-  }
-  .main__output {
-    min-width: 100%;
-    min-height: 100%;
-  }
-  .main__output__image {
-    display: none;
-  }
-  .result__text {
-    flex: 1;
-  }
-}
-
-@media (max-width: 480px) {
-  html {
-    font-size: 65%;
-  }
-}
-
-@media (max-width: 320px) {
-  html {
-    font-size: 55%;
-  }
 }

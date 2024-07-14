@@ -3,59 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon" />
     <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <title>Encriptador de texto</title>
   </head>
   <body>
-    <header class="header">
-      <img class="header__logo" src="./images/a-logo.svg" alt="Alura logo" />
-    </header>
-    <main class="main">
-      <section class="main__input">
-        <textarea
-          placeholder="Ingrese el texto aquí"
-          name="message"
-          id="main__input__textarea"
-        ></textarea>
-        <p class="main__input__info">
-          <img
-            class="main__input__icon"
-            src="./images/exclamation-icon.svg"
-            alt="Exclamation icon"
-          />
-          Sólo letras minúsculas y sin acentos
-        </p>
-        <div class="main__input__buttons">
-          <button
-            onclick="showResult(encrypt,'Mensaje encriptado')"
-            class="main__input__button-encrypt"
-          >
-            Encriptar
-          </button>
-          <button
-            onclick="showResult(decrypt,'Mensaje desencriptado')"
-            class="main__input__button-decrypt"
-          >
-            Desencriptar
-          </button>
-        </div>
-      </section>
-      <section class="main__output" id="main__output">
-        <img
-          class="main__output__image"
-          src="./images/searching-character.svg"
-          alt="Searching character"
-        />
-        <div class="main__output__text-container">
-          <p class="main__output__message">Ningún mensaje fue encontrado</p>
-          <p class="main__output__info">
-            Ingresa el texto que desees encriptar o desencriptar
+    <section class="body__container">
+      <header class="header">
+        <img class="header__logo" src="./images/a-logo.svg" alt="Alura logo" />
+      </header>
+      <main class="main">
+        <section class="main__input">
+          <textarea
+            placeholder="Ingrese el texto aquí"
+            name="message"
+            id="main__input__textarea"
+          ></textarea>
+          <p class="main__input__info">
+            <img
+              class="main__input__icon"
+              src="./images/exclamation-icon.svg"
+              alt="Exclamation icon"
+            />
+            Sólo letras minúsculas y sin acentos
           </p>
-        </div>
-      </section>
-    </main>
-    <footer class="footer"></footer>
+          <div class="main__input__buttons">
+            <button
+              onclick="showResult(encrypt,'Mensaje encriptado')"
+              class="main__input__button-encrypt"
+            >
+              Encriptar
+            </button>
+            <button
+              onclick="showResult(decrypt,'Mensaje desencriptado')"
+              class="main__input__button-decrypt"
+            >
+              Desencriptar
+            </button>
+          </div>
+        </section>
+        <section class="main__output" id="main__output">
+          <img
+            class="main__output__image"
+            src="./images/searching-character.svg"
+            alt="Searching character"
+          />
+          <div class="main__output__text-container">
+            <p class="main__output__message">Ningún mensaje fue encontrado</p>
+            <p class="main__output__info">
+              Ingresa el texto que desees encriptar o desencriptar
+            </p>
+          </div>
+        </section>
+      </main>
+    </section>
+    <footer class="footer">
+      <p class="footer__text">
+        © 2024 Desarrollado por Román Ríos
+
+        <a href="https://romanrios.github.io" target="_blank">
+          <i class="fas fa-globe footer__icon"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/romanrios" target="_blank">
+          <i class="fab fa-linkedin footer__icon footer__icon__linkedin"></i>
+        </a>
+      </p>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/dictionary.js"></script>
     <script src="./js/main.js"></script>
