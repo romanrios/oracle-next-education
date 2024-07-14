@@ -64,18 +64,24 @@
 
 @media (max-width: 480px) {
   html {
-    font-size: 65%;
+    font-size: 70%;
   }
   body {
     min-height: 95vh;
   }
+  .main__input__info {
+    font-size: 1rem;
+  }
   .footer {
     margin-bottom: 3rem;
+  }
+  .footer__text {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 320px) {
   html {
-    font-size: 55%;
+    font-size: 60%;
   }
 }
