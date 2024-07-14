@@ -69,8 +69,20 @@
   body {
     min-height: 95vh;
   }
+  .body__container {
+    padding: 2.5rem 2rem;
+  }
   .main__input__info {
     font-size: 1rem;
+  }
+  .main__input__buttons {
+    gap: 1rem;
+  }
+  .main__input__buttons button {
+    font-size: 1.2rem;
+  }
+  .result__button {
+    font-size: 1.2rem;
   }
   .footer {
     margin-bottom: 3rem;
@@ -83,5 +95,8 @@
 @media (max-width: 320px) {
   html {
     font-size: 60%;
+  }
+  .body__container {
+    padding: 2.5rem 1rem;
   }
 }
