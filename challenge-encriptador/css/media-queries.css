@@ -57,6 +57,9 @@
   .result__button {
     max-width: 100%;
   }
+  .footer {
+    margin-bottom: 2rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -65,6 +68,9 @@
   }
   body {
     min-height: 95vh;
+  }
+  .footer {
+    margin-bottom: 3rem;
   }
 }
 
