@@ -28,6 +28,12 @@ body {
 
 .header__logo {
   width: 1.95rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.header__logo:hover {
+  opacity: 0.8;
 }
 
 .main {

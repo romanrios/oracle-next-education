@@ -1,5 +1,11 @@
 const outputSection = document.querySelector("#main__output");
 const textareaText = document.querySelector("#main__input__textarea");
+const headerLogo = document.querySelector("#header__logo");
+
+headerLogo.addEventListener("click", function () {
+  defaultOutput();
+  textareaText.value = "";
+});
 
 function showResult(encryptOrDecrypt, message) {
   if (textareaText.value) {
