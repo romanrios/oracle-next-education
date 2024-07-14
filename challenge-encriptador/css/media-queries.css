@@ -21,6 +21,9 @@
   html {
     font-size: 80%;
   }
+  body {
+    min-height: 97.5vh;
+  }
   .body__container {
     flex-direction: column;
   }
@@ -59,6 +62,9 @@
 @media (max-width: 480px) {
   html {
     font-size: 65%;
+  }
+  body {
+    min-height: 95vh;
   }
 }
 
