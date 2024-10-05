@@ -1,0 +1,110 @@
+/* Este repositório base fué creado para ayudarte en caso que no sepas como comenzar, recuerda que el portafolio es tu carta de presentación y debes darle tu cara, por eso te invitamos a personalizarlo según tu estilo y preferencias no te limites apenas al layout propuesto en figma  
+*/
+:root {
+    --color-de-fondo: #F5F5F5;
+    --color-de-fondo-menu: #ffffff;
+    --color-de-link: #000000;
+}
+
+body {
+    background-color: var(--color-de-fondo);
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    line-height: 1.6;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-de-link);
+}
+
+/* ------------------------------ Sección Menú -------------------------------*/
+.cabecera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--color-de-fondo-menu);
+}
+
+.cabecera__logo {
+    max-width: 80px; /* Ajuste para pantallas pequeñas */
+}
+
+.cabecera__titulo {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.navegacion__lista {
+    display: none;
+}
+
+.navegacion__elemento a {
+    font-size: 0.9rem;
+}
+/* ------------------------------ Sección Presentación ------------------------------*/
+
+
+/* ------------------------------ Sección sobre mí ----------------------------------*/
+
+
+/*------------------------------ Sección de Habilidades ------------------------------*/
+
+
+/*------------------------------ Sección de Aficiones --------------------------------*/
+
+
+/*------------------------------ Sección de Proyectos --------------------------------*/
+
+
+/*------------------------------ Sección de Contacto ---------------------------------*/
+
+
+/* ------------------------------ Responsividad ---------------------------------------*/
+
+/* Tablets y pantallas más grandes */
+@media (min-width: 768px) {
+    .cabecera {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cabecera__logo {
+        max-width: 100px;
+    }
+
+    .cabecera__titulo {
+        font-size: 1.5rem;
+    }
+
+    .navegacion__lista {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 0;
+    }
+
+    .navegacion__elemento a {
+        font-size: 1rem;
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1024px) {
+    /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
+    .cabecera__titulo {
+        font-size: 1.8rem;
+    }
+
+    .navegacion__elemento a {
+        font-size: 1.1rem;
+    }
+}
