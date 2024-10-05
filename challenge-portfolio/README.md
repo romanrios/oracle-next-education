@@ -4,6 +4,10 @@ Alura Challenge | Oracle Next Education | Autor: Román Ríos
 
 ![screenshot](https://github.com/user-attachments/assets/39f3f2ea-939b-4452-9c74-5d1b5a807b00)
 
+## Acceder al sitio en GitHub Pages:
+
+https://romanrios.github.io/oracle-next-education/challenge-portfolio/
+
 ## Secciones:
 
 - Inicio
@@ -14,10 +18,6 @@ Alura Challenge | Oracle Next Education | Autor: Román Ríos
 - Contacto
 
 Extra: Selector Español / Inglés
-
-## GitHub Pages:
-
-https://romanrios.github.io/oracle-next-education/challenge-portfolio/
 
 ## Objetivos:
 
