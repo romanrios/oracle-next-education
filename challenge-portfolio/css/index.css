@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:ital,wght@0,500..900;1,100..900&display=swap");
+
+@import "./variables.css";
+@import "./navbar.css";
+@import "./hero.css";
+@import "./experience.css";
+@import "./skills.css";
+@import "./projects.css";
+@import "./downloads.css";
+@import "./contact.css";
+@import "./footer.css";
+
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--color-primary);
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--color-primary);
+  font-weight: 900;
+  margin-bottom: 20px;
+  padding-top: 70px;
+}
+
+p,
+a {
+  line-height: 1.5em;
+}

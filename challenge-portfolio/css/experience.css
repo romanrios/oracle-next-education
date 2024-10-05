@@ -1,0 +1,76 @@
+/* EXPERIENCIA */
+section#experiencia {
+  background: rgb(193, 248, 250);
+}
+
+section#timelines-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+/* Timeline Container */
+.timeline {
+  padding: 30px 30px 0px 30px;
+}
+
+/* Outer Layer with the timeline border */
+.outer {
+  border-left: 2px solid var(--color-primary);
+}
+
+/* Card container */
+.card {
+  position: relative;
+  margin: 0 0 20px 20px;
+  padding: 10px;
+  color: var(--color-primary);
+  max-width: 400px;
+}
+
+/* Information about the timeline */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+/* Card title */
+.title {
+  color: var(--color-primary);
+  position: relative;
+  font-weight: 900;
+}
+
+/* Timeline dot  */
+.title::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 999px;
+  left: -39px;
+  border: 3px solid var(--color-primary);
+}
+
+.anio {
+  font-size: 13px;
+  color: var(--color-primary);
+  letter-spacing: 1px;
+}
+
+.timeline_top_title {
+  color: var(--color-primary);
+  padding: 10px 0 15px 0;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  font-family: "Comfortaa", sans-serif;
+}
+
+.timeline_top_title:hover {
+  font-weight: 700;
+}

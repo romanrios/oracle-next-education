@@ -1,24 +1,32 @@
-# Challenge ONE | Front End - Portfolio
+# Challenge ONE | Front End -  Portafolio
 
-<p align="center" >
-     <img width="600" heigth="600" src="https://user-images.githubusercontent.com/101413385/169097543-d5ada41e-7db8-481d-9d89-cef4efdf7e05.png">
-</p>
+Alura Challenge | Oracle Next Education | Autor: Román Ríos
 
+![screenshot](https://github.com/user-attachments/assets/39f3f2ea-939b-4452-9c74-5d1b5a807b00)
 
-### ¡Bienvenido al proyecto base del Portafolio ! Pasos principales:
----
-#### Marca este proyecto con una estrella ⭐
-#### Sigue las lecciones y las instrucciones de contenido 📚
+## Secciones:
 
-### Analisando el repositorio!
----
-### Este repositorio base es una sugerencia inicial, en caso de que aún no tengas un diseño que refleje tu estilo y personalidad. Siéntete libre de modificar tu portafolio como desees, aquí encontrarás:
-#### 🔹index.html: Documento HTML concluído que puedes utilizar en tu proyecto. Las fuentes, los archivos CSS y Javascript ya están referenciados en el documento y todas las secciones contienen comentários que te ayudan a entender la estructura. Si quieres, puedes aventurarte y contruir tu propio HTML.
-#### 🔹style.css: Documento de CSS con instrucciones de estilo y algunas sugerencias de desarrollo.
-#### 🔹script.js: Documento vacío dónde puedes desarrollar tu lógica para validar el formulário, ESTA VALIDACIÓN ES CONSIDERADA UN DESAFÍO EXTRA POR LO QUE NO ES OBLIGATÓRIA SU IMPLEMENTACIÓN.
+- Inicio
+- Experiencia
+- Habilidades
+- Proyectos
+- Descargas
+- Contacto
 
-#### Cuando clones o descargues el proyecto base, tendrás la siguiente presentación:
-<p align="center" >
-     <img width="600" heigth="600" src="https://user-images.githubusercontent.com/101413385/169064699-f268715c-822c-4335-b066-97a1bc1ea8e1.png">
-</p>
+Extra: Selector Español / Inglés
 
+## GitHub Pages:
+
+https://romanrios.github.io/challenge-one-portafolio-latam/
+
+## Objetivos:
+
+El objetivo de este proyecto es simular la experiencia de un entorno de desarrollo real, donde se puedan aplicar conceptos aprendidos en cursos previos de HTML, CSS y JavaScript. El desafío busca consolidar y fortalecer conocimientos en estilización, responsividad y desarrollo web.
+
+El portafolio está diseñado para poner en práctica los contenidos de los siguientes cursos:
+
+- HTML y CSS: Ambiente de desarrollo, estructura de archivos y tags.
+- HTML y CSS3: Clases, posicionamiento y Flexbox.
+- HTML y CSS: Header, footer y variables CSS.
+- HTML y CSS: Trabajando con responsividad y publicación de proyectos.
+- CSS: Flexbox y layouts responsivos.

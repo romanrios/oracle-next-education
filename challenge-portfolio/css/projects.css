@@ -1,0 +1,97 @@
+/* PROJECTS */
+section#projects {
+  background-color: rgb(237, 252, 255);
+  color: var(--color-primary);
+}
+
+#title_proyectos {
+  margin-bottom: 40px;
+}
+
+@media (min-width: 858px) {
+  section#projects {
+    min-height: 100vh;
+    padding-top: 30px;
+  }
+}
+
+.projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 2em;
+}
+
+.project-header {
+  font-size: 15px;
+  padding: 2px 0;
+  text-align: center;
+  background: var(--color-gradient1);
+  color: white;
+  border-radius: 15px 15px 0 0;
+}
+
+.projects-list h3 {
+  font-weight: 900;
+}
+
+.project-detail {
+  width: 400px;
+  margin: 15px;
+}
+
+.project-detail img {
+  width: 100%;
+}
+
+.project_ver-mas {
+  width: 400px;
+  margin: 15px;
+  height: 225px;
+  background: var(--color-gradient1);
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  justify-content: center;
+  text-align: center;
+  opacity: 0.6;
+  transition: all 0.5s;
+}
+
+.project_ver-mas div span,
+.project_ver-mas i {
+  color: #fff !important;
+}
+
+.project_ver-mas:hover {
+  opacity: 1;
+}
+
+.project_plus {
+  position: relative;
+  font-size: 30px;
+  top: 4px;
+}
+
+.project-icon {
+  opacity: 0.7;
+  font-size: 100px !important;
+  margin-bottom: 10px;
+  margin-top: -10px;
+}
+
+.link {
+  border-radius: 5px;
+  color: var(--color-primary);
+  padding: 4px 5px;
+  background-color: rgba(112, 238, 255, 0.774);
+  line-height: 30px;
+  font-style: italic;
+  font-size: small;
+  font-weight: 600;
+  transition: all 0.5s;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

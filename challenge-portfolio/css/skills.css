@@ -1,0 +1,64 @@
+/* HABILIDADES */
+
+section#habilidades {
+  padding-bottom: 50px;
+  background: #86e0d9;
+}
+
+section#habilidades_box_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.habilidades_box {
+  margin: 10px;
+  padding: 10px;
+  max-width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 400px) {
+  .habilidades_box {
+    margin: 10px 0;
+    padding: 10px 0;
+    max-width: 360px;
+  }
+}
+
+.habilidades_box_ {
+  padding: 10px 0 0 0;
+}
+
+.tag {
+  font-size: 15px;
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 4px 8px;
+  margin: 8px 4px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.hab_box_title {
+  text-align: center;
+  padding: 5px 0 0 0;
+  font-family: "Comfortaa";
+  color: var(--color-primary);
+  font-size: 15px;
+  letter-spacing: 1.5px;
+}
+
+@media (min-width: 858px) {
+  section#habilidades {
+    min-height: 100vh;
+    padding-top: 50px;
+  }
+
+  section#habilidades_box_container {
+    padding-top: 50px;
+  }
+}

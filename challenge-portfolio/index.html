@@ -1,171 +1,686 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Fuente del Proyecto Raleway -->
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
-    <title>Mi Portafolio</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Román Ríos</title>
+  <link rel="stylesheet" href="./css/index.css" />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <link rel="shortcut icon" href="assets/favicon.ico" />
+
+  <meta property="og:url" content="https://romanrios.github.io/" />
+  <meta property="og:title" content="Román Ríos" />
+  <meta property="og:image" content="https://romanrios.github.io/assets/og.png" />
+  <meta property="og:description" content="Software Developer and Graphic Designer" />
+  <meta property="og:type" content="website" />
 </head>
 
 <body>
-    <!-- Menú -->
-    <header class="cabecera">
-        <img class="cabecera__logo" src="assets/vector.png" alt="Logo">
-        <h1 class="cabecera__titulo">Alura Latam</h1>
-        <nav class="navegacion">
-            <ul class="navegacion__lista">
-                <li class="navegacion__elemento"><a href="#sobre-mi">Sobre mí</a></li>
-                <li class="navegacion__elemento"><a href="#habilidades">Habilidades</a></li>
-                <li class="navegacion__elemento"><a href="#aficiones">Aficiones</a></li>
-                <li class="navegacion__elemento"><a href="#formacion">Formación</a></li>
-                <li class="navegacion__elemento"><a href="#proyectos">Proyectos</a></li>
-                <li class="navegacion__elemento"><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <div id="idioma">
+        <button type="button" id="es">Español</button>
+        <button type="button" id="en">English</button>
+      </div>
 
-    <!-- Sección de Presentación -->
-    <section class="presentacion">
-        <img class="presentacion__foto" src="assets/profile.png" alt="Foto de perfil">
-        <div class="presentacion__contenedor">
-            <h2 class="presentacion__titulo">Hola, mi nombre es Alura Latam y construyo páginas web</h2>
-            <p class="presentacion__subtitulo">Soy formada en... lorem ipsum sit amet consectetur y actualmente estoy participando del proyecto Oracle ONE en Alura Latam.</p>
-            <ul class="redes">
-                <li class="redes__img"><a href="">Github <img src="assets/arrow.png" alt="Flecha"></a></li>
-                <li class="redes__img"><a href="">Linkedin <img src="assets/arrow.png" alt="Flecha"></a></li>
-                <li class="redes__img"><a href="">Instagram <img src="assets/arrow.png" alt="Flecha"></a></li>
-                <li class="redes__img"><a href="">Currículo <img src="assets/arrow.png" alt="Flecha"></a></li>
-            </ul>
-        </div>
+      <input type="checkbox" id="check" />
+      <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+      </label>
+      <ul id="ul">
+        <li><a class="active" href="#hero" id="nav_inicio">Inicio</a></li>
+        <li><a href="#experiencia" id="nav_experiencia">Experiencia</a></li>
+        <li><a href="#habilidades" id="nav_habilidades">Habilidades</a></li>
+        <li><a href="#projects" id="nav_proyectos">Proyectos</a></li>
+        <li><a href="#downloads" id="nav_downloads">Descargas</a></li>
+        <li><a href="#contact_main" id="nav_contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <img src="assets/perfil.png" alt="Mi imagen de perfil" />
+      <h1>Román Ríos</h1>
+      <p id="hero_subtitle">
+        Desarrollador de Software /<br />Diseñador de Comunicación Visual
+      </p>
     </section>
 
-    <!-- Sección sobre mí -->
-    <section class="sobre-mi" id="sobre-mi">
-        <h2 class="sobre-mi__titulo">Sobre mí</h2>
-        <p class="sobre-mi__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque velit velit, volutpat semper dignissim dictum, imperdiet ut lacus. Quisque gravida ex a mattis pretium. Suspendisse potenti. Ut semper sagittis ligula et lacinia.</p>
-        <p class="sobre-mi__texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque velit velit, volutpat semper dignissim dictum, imperdiet ut lacus. Quisque gravida ex a mattis pretium. Suspendisse potenti. Ut semper sagittis ligula et lacinia. Aenean sit amet felis venenatis, egestas metus vitae, aliquet metus.</p>
-        <!-- Firma opcional -->
-        <img class="sobre-mi__firma" src="assets/signature.png" alt="Firma">
+    <section id="hero2">
+      <p id="hero2_text">
+        ¡Hola, soy Román!
+        <br />
+        <br />
+        👨‍💻 Desarrollador de Software y Diseñador de Comunicación Visual de Argentina,
+        apasionado por crear experiencias de alto impacto en desarrollo web y
+        diseño multimedia.
+        <br />
+        <br />
+        🎓 Realicé la Licenciatura en Diseño de Comunicación Visual en la
+        Universidad Nacional del Litoral, con especializaciones en Desarrollo
+        Web y Programación. Actualmente, estoy cursando la Tecnicatura
+        Superior en Desarrollo de Software, profundizando mis habilidades en
+        el diseño, construcción, verificación, depuración, optimización y
+        mantenimiento de software.
+        <br />
+        <br />
+        💡 Mi enfoque se basa en la proactividad, el trabajo en equipo, la
+        comunicación efectiva y la adaptabilidad, con una formación constante
+        para afrontar desafíos y alcanzar objetivos.
+        <br />
+        <br />
+        🚀 Listo para aportar todo mi potencial y experiencia a tu equipo.
+        ¡Conectemos!
+      </p>
     </section>
 
-    <!-- Sección de Habilidades -->
-    <section class="habilidades" id="habilidades">
-        <h2 class="habilidades__titulo">Habilidades</h2>
-        <ul class="habilidades__lista">
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/html.png" alt="HTML">
-                <p class="habilidades__nombre">HTML 5</p>
-            </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/js_icon.png" alt="JavaScript">
-                <p class="habilidades__nombre">JavaScript</p>
-            </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/php_icon.png" alt="PHP">
-                <p class="habilidades__nombre">PHP</p>
-            </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/nodejs_icon.png" alt="Node.js">
-                <p class="habilidades__nombre">Node.js</p>
-            </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/react_icon.png" alt="React">
-                <p class="habilidades__nombre">React</p>
-            </li>
-            <li class="habilidades__elemento">
-                <img class="habilidades__icono" src="assets/css_icon.png" alt="CSS">
-                <p class="habilidades__nombre">CSS</p>
-            </li>
-        </ul>
-    </section>
+    <section id="experiencia">
+      <h2 id="title_experiencia">Experiencia</h2>
 
-    <!-- Sección de Aficiones -->
-    <section class="aficiones" id="aficiones">
-        <h2 class="aficiones__titulo">Aficiones</h2>
-        <ul class="aficiones__lista">
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/skate_icon.png" alt="Patinaje">
-                <p class="aficiones__nombre">Patinaje</p>
-            </li>
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/guitar_icon.png" alt="Tocar bajo">
-                <p class="aficiones__nombre">Tocar bajo</p>
-            </li>
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/headphones_icon.png" alt="Oír música">
-                <p class="aficiones__nombre">Oír música</p>
-            </li>
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/tv_icon.png" alt="Ver series">
-                <p class="aficiones__nombre">Ver series</p>
-            </li>
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/forkspoon_icon.png" alt="Cocinar">
-                <p class="aficiones__nombre">Cocinar</p>
-            </li>
-            <li class="aficiones__elemento">
-                <img class="aficiones__icono" src="assets/camera_icon.png" alt="Tomar fotos">
-                <p class="aficiones__nombre">Tomar fotos</p>
-            </li>
-        </ul>
-    </section>
+      <section id="timelines-container">
+        <div>
+          <div class="timeline">
+            <h3 class="timeline_top_title" id="exp_academica">ACADÉMICA</h3>
 
-    <!-- Sección de Formación académica -->
-    <section class="formacion" id="formacion">
-        <h2 class="formacion__titulo">Formación académica</h2>
-        <ul class="formacion__lista">
-            <li class="formacion__elemento">
-                <img class="formacion__icono" src="assets/ufpr_logo.png" alt="UFPR">
-                <div>
-                    <h3 class="formacion__nombre">Análisis de datos</h3>
-                    <p class="formacion__detalle">2018 - UFPR</p>
+            <div class="outer">
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">IFTS N° 29</h3>
+                  <p id="exp_tecnicatura">
+                    Tecnicatura Superior en Desarrollo de Software
+                  </p>
+                  <p class="anio" id="anio_tecnicatura">2024 ~ En curso</p>
                 </div>
-            </li>
-            <li class="formacion__elemento">
-                <img class="formacion__icono" src="assets/alura_logo.png" alt="Alura">
-                <div>
-                    <h3 class="formacion__nombre">Formación en UX Design</h3>
-                    <p class="formacion__detalle">2019 - Alura</p>
+              </div>
+
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Universidad Nacional del Litoral</h3>
+                  <p id="exp_universidad">
+                    Licenciatura en Diseño de Comunicación Visual.
+                    Carrera de grado. Facultad de Arquitectura, Diseño y Urbanismo.
+                  </p>
+                  <p class="anio" id="anio_universidad">
+                    2005 ~ Tesina pendiente
+                  </p>
                 </div>
-            </li>
-            <li class="formacion__elemento">
-                <img class="formacion__icono" src="assets/ufrj_logo.png" alt="UFRJ">
-                <div>
-                    <h3 class="formacion__nombre">Posgrado en diseño</h3>
-                    <p class="formacion__detalle">En curso - UFRJ</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline">
+            <h3 class="timeline_top_title" id="exp_laboral">LABORAL</h3>
+
+            <div class="outer">
+              <div class="card">
+                <div class="info">
+                  <h3 class="title" id="exp_freelance_title">
+                    Profesional independiente
+                  </h3>
+                  <p id="exp_freelance">
+                    Desarrollo de software y diseño multimedial.
+                  </p>
+                  <p class="anio" id="anio_freelance">2018 ~ Presente</p>
                 </div>
-            </li>
-        </ul>
+              </div>
+
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Seal Innovation S.A.</h3>
+                  <p id="exp_seal">
+                    Administración y facturación en industria de productos
+                    plásticos.
+                  </p>
+                  <p class="anio">2018 ~ 2022</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Fusa Diseño</h3>
+                  <p id="exp_fusa">Diseño multimedial independiente.</p>
+                  <p class="anio">2010 ~ 2018</p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="info">
+                  <h3 class="title">Zona Zero</h3>
+                  <p id="exp_zona">
+                    Ventas y servicio técnico de videojuegos e informática.
+                  </p>
+                  <p class="anio">2011 ~ 2018</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline">
+          <h3 class="timeline_top_title" id="exp_cursos">CURSOS</h3>
+          <div class="outer">
+            <div class="card">
+              <div class="info">
+                <h3 class="title">Codo a codo 4.0</h3>
+                <p id="exp_codoacodo">
+                  ■ Curso de especialización React JS<br />
+                  ■ Curso de Habilidades Blandas<br />
+                  ■ Full Stack Desarrollo Web - Node.JS
+                </p>
+                <p class="anio">2023 ~ 2024</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="info">
+                <h3 class="title">Universidad Politécnica de Madrid</h3>
+                <p id="exp_react">
+                  Desarrollo de aplicaciones con React y React Native
+                </p>
+                <p class="anio">2023</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="info">
+                <h3 class="title">The Rabbit Hole</h3>
+                <p id="exp_pixi">Desarrollo de videojuegos con Pixi.JS</p>
+                <p class="anio">2023</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="info">
+                <h3 class="title">Argentina Programa 4.0</h3>
+                <p id="exp_argentina">
+                  ■ Curso #SeProgramar (INTI)<br />
+                  ■ Desarrollo Front-end (Ticmas)<br />
+                  ■ Desarrollo de aplicaciones Android (Ticmas)<br />
+                  ■ Desarrollo Front-end (Educado en Argentina)<br />
+                  ■ Inglés Nivel 8 B1.2 MCER (CUI-UBA)
+                </p>
+                <p class="anio">2022 ~ 2023</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="info">
+                <h3 class="title">Cisco Networking Academy</h3>
+                <p id="exp_argentina">
+                  ■ JavaScript Essentials 1<br />
+                  ■ Python Essentials 1<br />
+                  ■ English for IT 1
+                </p>
+                <p class="anio">2022 ~ 2023</p>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="info">
+                <h3 id="exp_motion_title" class="title">
+                  Curso de Posgrado FADU UNL
+                </h3>
+                <p id="exp_motion">
+                  Motion Graphics Design: Del diseño gráfico al diseño en
+                  movimiento.<br />
+                </p>
+                <p class="anio">2012</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
 
-    <!-- Sección de Proyectos -->
-    <section class="proyectos" id="proyectos">
-        <h2 class="proyectos__titulo">Experiencia Profesional</h2>
-        <div class="proyectos__contenedor">
-            <h3 class="proyectos__nombre">Título de la Experiencia</h3>
-            <p class="proyectos__descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt quisquam unde repudiandae fugiat, earum temporibus!</p>
+    <!-- *********** -->
+    <!-- HABILIDADES -->
+    <!-- *********** -->
+
+    <section id="habilidades">
+      <h2 id="title_habilidades">Habilidades</h2>
+
+      <section id="habilidades_box_container">
+        <div class="habilidades_box_">
+          <h3 class="hab_box_title" id="hab_diseño">DISEÑO</h3>
+          <div class="habilidades_box">
+            <p class="tag" id="hab_identidadvisual">Identidad visual</p>
+            <p class="tag" id="hab_diseñowebyapps">Diseño web y Apps</p>
+            <p class="tag" id="hab_interfazdeusuario">Interfaz de usuario</p>
+            <p class="tag">Responsive Design</p>
+            <p class="tag">Motion graphics</p>
+            <p class="tag" id="hab_diseñodeinformacion">
+              Diseño de información
+            </p>
+            <p class="tag" id="hab_diseñoeditorial">Diseño editorial</p>
+            <p class="tag">Illustrator</p>
+            <p class="tag">Photoshop</p>
+            <p class="tag">CorelDRAW</p>
+            <p class="tag">Figma</p>
+            <p class="tag">After Effects</p>
+            <p class="tag">Premiere</p>
+            <p class="tag">InDesign</p>
+          </div>
         </div>
-        <div class="proyectos__contenedor">
-            <h3 class="proyectos__nombre">Título de la Experiencia</h3>
-            <p class="proyectos__descripcion">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt quisquam unde repudiandae fugiat, earum temporibus!</p>
+
+        <div class="habilidades_box_">
+          <h3 class="hab_box_title" id="hab_desarrollo">DESARROLLO</h3>
+          <div class="habilidades_box">
+            <p class="tag">HTML5</p>
+            <p class="tag">CSS3</p>
+            <p class="tag">JavaScript</p>
+            <p class="tag">TypeScript</p>
+            <p class="tag">Node.js</p>
+            <p class="tag">React</p>
+            <p class="tag">PixiJS</p>
+            <p class="tag">Express.js</p>
+            <p class="tag">Git / GitHub</p>
+            <p class="tag">MySQL</p>
+            <p class="tag">Firebase</p>
+            <p class="tag">PHP</p>
+            <p class="tag">Python</p>
+            <p class="tag">C#</p>
+            <p class="tag">Android Studio</p>
+            <p class="tag">Game Engines</p>
+          </div>
         </div>
+
+        <div class="habilidades_box_">
+          <h3 class="hab_box_title" id="hab_musica">OTRAS</h3>
+          <div class="habilidades_box">
+            <p class="tag" id="hab_proactividad">Proactividad</p>
+            <p class="tag" id="hab_equipo">Trabajo en equipo</p>
+            <p class="tag" id="hab_comunicacion">Comunicación efectiva</p>
+            <p class="tag" id="hab_adaptabilidad">Adaptabilidad</p>
+            <p class="tag" id="hab_musicaoriginal">Música original</p>
+            <p class="tag" id="hab_efectosdesonido">Efectos de sonido</p>
+            <p class="tag" id="hab_vst">Instrumentos virtuales VST</p>
+            <p class="tag">MIDI</p>
+            <p class="tag">Adobe Audition</p>
+            <p class="tag">FL Studio</p>
+          </div>
+        </div>
+      </section>
     </section>
 
-    <!-- Sección de Contacto -->
-    <section class="contacto" id="contacto">
-        <h2 class="contacto__titulo">Contacto</h2>
-        <form class="contacto__formulario">
-            <input class="contacto__campo" type="text" placeholder="Nombre">
-            <input class="contacto__campo" type="email" placeholder="Correo Electrónico">
-            <textarea class="contacto__campo contacto__campo--textarea" placeholder="Mensaje"></textarea>
-            <button class="contacto__boton" type="submit">Enviar</button>
+    <!-- ********* -->
+    <!-- PROYECTOS -->
+    <!-- ********* -->
+
+    <section id="projects">
+      <h2 id="title_proyectos">Proyectos realizados</h2>
+
+      <div class="projects-list">
+        <!-- PINO EN EL MOLINO -->
+        <div class="project-detail">
+          <p class="project-header">Diseño + Desarrollo + Música</p>
+
+          <div style="padding: 56.4% 0 0 0; position: relative; margin-bottom:
+            7px;"">
+            <iframe
+              src=" https://player.vimeo.com/video/881086599?h=3a7c63e816&title=0&byline=0&portrait=0" style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              " frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h3>Pino en el Molino</h3>
+          <p id="proyecto_pino">Videojuego de plataformas</p>
+          <a href="https://github.com/romanrios/pinomolino" target="_blank" class="link">GitHub</a>
+          <a href="https://romanrios.github.io/pinomolino/" target="_blank" class="link">GitHub Pages</a>
+          <a href="https://romanrios.itch.io/pinomolino/" target="_blank" class="link">Itch.io</a>
+          <a href="https://www.gato.us/game/pino-en-el-molino" target="_blank" class="link">Gato.us</a>
+        </div>
+
+        <!-- FUTUMAG -->
+        <div class="project-detail">
+          <p class="project-header">Diseño</p>
+          <div style="
+              padding: 56.25% 0 0 0;
+              position: relative;
+              margin-bottom: 7px;
+            ">
+            <iframe src="https://player.vimeo.com/video/749776562?h=b391f64a51&title=0&byline=0&portrait=0" style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              " frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h3>Futumag</h3>
+          <p id="proyecto_futumag">
+            Magazine digital sobre diseño y tecnología
+          </p>
+          <a href="https://www.behance.net/gallery/152697725/FUTUMAG-Revista-Digital" target="_blank"
+            class="link">Behance</a>
+        </div>
+
+        <!-- SANTA FE ROCK QUIZ -->
+        <div class="project-detail">
+          <p class="project-header">Diseño + Desarrollo + Música</p>
+          <div style="
+              padding: 56.25% 0 0 0;
+              position: relative;
+              margin-bottom: 7px;
+            ">
+            <iframe style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              " src="https://www.youtube.com/embed/9y86AfY1hWs?si=UBEN35MsKQS57nQF" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <h3>Santa Fe Rock Quiz</h3>
+          <p id="proyecto_rockquiz">Videojuego de música, puzzle y quiz</p>
+          <a href="https://github.com/romanrios/rockquiz" target="_blank" class="link">GitHub</a>
+          <a href="https://romanrios.github.io/rockquiz/" target="_blank" class="link">GitHub Pages</a>
+          <a href="https://romanrios.itch.io/rockquiz/" target="_blank" class="link">Itch.io</a>
+        </div>
+
+        <!-- SP4C3 W4RS -->
+        <div class="project-detail">
+          <p class="project-header">Diseño + Desarrollo + Música</p>
+          <div style="
+              padding: 56.25% 0 0 0;
+              position: relative;
+              margin-bottom: 7px;
+            ">
+            <iframe style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              " src="https://www.youtube.com/embed/cUuI7QVixP4?si=wq2_rki9Eof8f6yI" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <h3>SP4C3 W4RS</h3>
+          <p id="proyecto_spacewars">Videojuego shoot'em up</p>
+          <a href="https://github.com/romanrios/spacewars" target="_blank" class="link">GitHub</a>
+          <a href="https://romanrios.github.io/spacewars/" target="_blank" class="link">GitHub Pages</a>
+          <a href="https://romanrios.itch.io/spacewars/" target="_blank" class="link">Itch.io</a>
+          <a href="https://www.gato.us/game/sp4c3-w4rs" target="_blank" class="link">Gato.us</a>
+        </div>
+
+        <!-- FUNKOSHOP -->
+        <div class="project-detail">
+          <p class="project-header">Desarrollo</p>
+          <a title="Enlace al proyecto" href="https://romanrios-funkoshop.vercel.app/home" target="_blank">
+            <img src="assets/funkoshop.jpg" alt="Imagen proyecto Funkoshop" /></a>
+          <h3>Funkoshop</h3>
+          <p id="proyecto_spacewars">Funko Pop E-commerce</p>
+          <a href="https://github.com/romanrios/challenge_integrador" target="_blank" class="link">Github</a>
+          <a href="https://romanrios-funkoshop.vercel.app/home" target="_blank" class="link">Vercel</a>
+        </div>
+
+        <!-- MOSTRI MAKER -->
+        <div class="project-detail">
+          <p class="project-header">Diseño + Desarrollo + Música</p>
+          <div style="
+              padding: 56.25% 0 0 0;
+              position: relative;
+              margin-bottom: 7px;
+            ">
+            <iframe style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              " src="https://www.youtube.com/embed/GAF9Zqk4bRw?si=GrHkV-ozkKqY1Akf" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <h3>Mostri Maker</h3>
+          <p id="proyecto_mostrimaker">Juego para la Global Game Jam 2024</p>
+          <a href="https://romanrios.itch.io/mostrimaker/" target="_blank" class="link">Itch.io</a>
+          <a href="https://globalgamejam.org/games/2024/mostri-maker-4" target="_blank" class="link">GGJ2024</a>
+        </div>
+
+        <!-- TODO LIST -->
+        <div class="project-detail">
+          <p class="project-header">Desarrollo</p>
+          <div style="
+              padding: 56.25% 0 0 0;
+              position: relative;
+              margin-bottom: 7px;
+            ">
+            <iframe src="https://www.youtube.com/embed/k-l97QXpw4Q?si=ydveknbZS051-sMn" title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              "></iframe>
+          </div>
+          <h3>React To-Do List</h3>
+          <p id="proyecto_todo">Codo a Codo React Project</p>
+          <a href="https://github.com/romanrios/cac-react-grupo3/" target="_blank" class="link">Github</a>
+          <a href="https://romanrios.github.io/cac-react-grupo3/ToDoMar/dist/" target="_blank" class="link">Github
+            Pages</a>
+        </div>
+
+        <!-- REACT WEATHER -->
+        <div class="project-detail">
+          <p class="project-header">Desarrollo</p>
+          <a title="Enlace al proyecto" href="https://romanrios.github.io/react-weather/" target="_blank">
+            <img src="assets/weather.jpg" alt="Imagen proyecto Weather" /></a>
+          <h3>React Weather App</h3>
+          <p id="proyecto_weather">Sitio web para consultar el clima</p>
+          <a href="https://github.com/romanrios/react-weather/" target="_blank" class="link">Github</a>
+          <a href="https://romanrios.github.io/react-weather/" target="_blank" class="link">Github Pages</a>
+        </div>
+
+        <!-- PIROGRAM -->
+        <div class="project-detail">
+          <p class="project-header">Diseño</p>
+          <a title="Enlace al proyecto"
+            href="https://www.behance.net/gallery/152762299/Pirogram-Identidad-para-estudio-de-diseno" target="_blank">
+            <img src="assets/proyecto3.webp" alt="Imagen proyecto Pirogram" /></a>
+          <h3>Pirogram</h3>
+          <p id="proyecto_pirogram">Identidad visual para estudio de diseño</p>
+          <a href="https://www.behance.net/gallery/152762299/Pirogram-Identidad-para-estudio-de-diseno" target="_blank"
+            class="link">Behance</a>
+        </div>
+
+        <!-- SEAL -->
+        <div class="project-detail">
+          <p class="project-header">Diseño + Desarrollo</p>
+          <a title="Enlace al proyecto"
+            href="https://www.behance.net/gallery/62268697/Seal-Innovation-Sellos-hidraulicos-y-neumaticos"
+            target="_blank">
+            <img src="assets/seal.png" alt="Imagen proyecto Seal Innovation" /></a>
+          <h3>Seal Innovation</h3>
+          <p id="proyecto_seal">Identidad, impresos y web</p>
+          <a href="https://www.behance.net/gallery/62268697/Seal-Innovation-Sellos-hidraulicos-y-neumaticos"
+            target="_blank" class="link">Behance</a>
+        </div>
+
+        <!-- WE SOUND -->
+        <div class="project-detail">
+          <p class="project-header">Diseño</p>
+          <div style="
+              padding: 56.25% 0 0 0;
+              position: relative;
+              margin-bottom: 7px;
+            ">
+            <iframe src="https://player.vimeo.com/video/78780965?h=05dea07018&title=0&byline=0&portrait=0" style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              " frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h3>We Sound</h3>
+          <p id="proyecto_wesound">
+            Red social de producción musical colaborativa
+          </p>
+          <a href="https://www.behance.net/gallery/62267843/We-Sound-Red-social-de-produccion-musical" target="_blank"
+            class="link">Behance</a>
+        </div>
+
+        <!-- BIENAL -->
+        <div class="project-detail">
+          <p class="project-header">Diseño + Música</p>
+          <div style="
+              padding: 56.25% 0 0 0;
+              position: relative;
+              margin-bottom: 7px;
+              background-color: #42004c;
+            ">
+            <iframe src="https://player.vimeo.com/video/48918941?h=8932191269&title=0&byline=0&portrait=0" style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+              " frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <h3>Bienal de Arte Joven</h3>
+          <p id="proyecto_bienal">Animación y música original</p>
+          <a href="https://www.behance.net/gallery/62269789/Video-10ma-Bienal-de-Arte-Joven" target="_blank"
+            class="link">Behance</a>
+        </div>
+
+
+        <!-- OTROS PROYECTOS -->
+        <div class="project_ver-mas">
+          <a href="https://github.com/romanrios" target="_blank">
+            <i class="fa fa-github project-icon"></i>
+            <div>
+              <span class="project_plus">+</span>
+              <span id="+desarrollo">Proyectos de Desarrollo en GitHub</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="project_ver-mas">
+          <a href="https://behance.net/romanrios" target="_blank">
+            <i class="fa fa-behance project-icon"></i>
+            <div>
+              <span class="project_plus">+</span>
+              <span id="+diseño">Proyectos de Diseño en Behance</span>
+            </div>
+          </a>
+        </div>
+
+
+    </section>
+
+    <!-- ********* -->
+    <!-- DESCARGAS -->
+    <!-- ********* -->
+
+    <section id="downloads">
+      <h2 id="title_downloads">Descargas</h2>
+
+      <a class="downloads_link" href="/assets/CV Román Ríos - Español.pdf" target="_blank">📄 CV Español PDF</a>
+
+      <a class="downloads_link" href="/assets/CV Román Ríos - English.pdf" target="_blank">📄 CV English PDF</a>
+
+      <a id="certificates" class="downloads_link" href="/assets/Certificados Román Ríos.pdf" target="_blank">📄
+        Certificados PDF</a>
+    </section>
+
+    <section id="contact_main">
+      <h2 id="title_datos">Contacto</h2>
+
+      <section id="contact">
+        <div id="datos_contacto">
+          <div class="col">
+            &nbsp;<i class="fa fa-map-marker"></i>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;Santa Fe, Argentina</span>
+          </div>
+
+          <hr class="linea" color="#6BB4B6" size="1" />
+
+          <div class="col">
+            <i class="fa fa-whatsapp"></i>
+            <span>&nbsp;&nbsp;&nbsp;+54 9 342 4324907</span>
+          </div>
+
+          <hr class="linea" color="#6BB4B6" size="1" />
+
+          <div class="col">
+            <i class="fa fa-envelope-o"></i>
+            <span>&nbsp;&nbsp;&nbsp;romanrios@live.com</span>
+          </div>
+
+          <hr class="linea" color="#6BB4B6" size="1" />
+
+          <div class="redes">
+            <a href="https://www.linkedin.com/in/romanrios/" target="_blank" class="fa-stack fa-2x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+            </a>
+
+            <a href="https://github.com/romanrios" target="_blank" class="fa-stack fa-2x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+            </a>
+
+            <a href="https://www.behance.net/romanrios" target="_blank" class="fa-stack fa-2x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-behance fa-stack-1x fa-inverse"></i>
+            </a>
+
+            <a href="https://romanrios.itch.io/" target="_blank" class="fa-stack fa-2x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-itch-io fa-stack-1x fa-inverse"></i>
+            </a>
+
+            <a href="https://soundcloud.com/romanrios" target="_blank" class="fa-stack fa-2x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-soundcloud fa-stack-1x fa-inverse"></i>
+            </a>
+
+            <a href="https://www.instagram.com/roman_rios_galluccio/" target="_blank" class="fa-stack fa-2x">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+            </a>
+          </div>
+        </div>
+
+        <form class="form" action="https://formspree.io/f/meqwqwnb" method="POST">
+          <div class="form_container">
+            <input type="text" class="form__input" required placeholder="Nombre:" name="name" id="form_nombre"
+              autocomplete="name" />
+            <input type="email" class="form__input" required placeholder="E-mail:" name="_replyto" />
+            <textarea class="form__input form__input--message" required placeholder="Mensaje:" rows="7"
+              id="form_mensaje" name="message"></textarea>
+            <input type="submit" value="Enviar" class="form__cta" id="boton_enviar" />
+          </div>
         </form>
+      </section>
     </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Román Ríos</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </body>
-    <script src="script.js"></script>
+
 </html>

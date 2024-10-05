@@ -1,0 +1,88 @@
+/* CONTACTO: Datos personales */
+
+#datos_contacto {
+  max-width: 360px;
+  min-width: 360px;
+}
+
+.col {
+  color: var(--color-primary);
+  padding: 20px 0px 20px 55px;
+}
+
+.col .fa {
+  scale: 140%;
+}
+
+#datos_contacto .redes {
+  font-size: 0.6em;
+  padding: 20px 45px;
+}
+
+.fa-stack {
+  color: var(--color-primary);
+  padding: 0 21px;
+  transition: all 0.5s;
+}
+
+.fa-stack:hover {
+  color: rgb(0, 151, 189);
+}
+
+.linea {
+  margin: auto;
+  max-width: 320px;
+}
+
+/* CONTACTO: Formulario*/
+
+section#contact_main {
+  background-image: linear-gradient(0deg, #6ab6bb 0%, #bafff9 100%);
+  padding-bottom: 30px;
+}
+
+section#contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form {
+  width: 90%;
+  max-width: 360px;
+  min-width: 360px;
+  padding: 0em 1em 2em 1em;
+}
+
+.form_container {
+  padding-top: 1em;
+  width: 100%;
+  display: grid;
+  gap: 1em;
+  grid-auto-columns: 100%;
+}
+
+.form__input {
+  font-size: 1rem;
+  padding: 0.8em 1em;
+  outline: none;
+  border: none;
+  border: 1px solid rgb(154, 198, 216);
+  border-radius: 0.2em;
+}
+
+.form__cta {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 0.7em 0;
+  border-radius: 0.2em;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.form__cta:hover {
+  background: rgb(0, 151, 189);
+}
