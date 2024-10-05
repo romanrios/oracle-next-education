@@ -17,7 +17,7 @@ Extra: Selector Español / Inglés
 
 ## GitHub Pages:
 
-https://romanrios.github.io/challenge-one-portafolio-latam/
+https://romanrios.github.io/oracle-next-education/challenge-portfolio/
 
 ## Objetivos:
 
