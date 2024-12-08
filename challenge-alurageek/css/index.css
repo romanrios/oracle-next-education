@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&display=swap');
+@import "./reset.css";
+@import "./variables.css";
+
+/* Main Styles */
+body {
+    font-family: var(--font-text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-display);
+}
+
+main {
+    flex: 1;
+}
+
+
+
+/* Header */
+header {
+    display: flex;
+    height: 96px;
+    font-family: var(--font-display);
+    color: var(--almost-white);
+    font-size: 24px;
+    background: var(--violet);
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    gap: 13px
+}
+
+header img {
+    height: 32px;
+}
+
+
+/* Footer */
+footer {
+    background: var(--violet);
+}

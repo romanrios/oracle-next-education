@@ -1,0 +1,11 @@
+/* Variables */
+:root{
+    --font-display: "Press Start 2P", system-ui;
+    --font-text: "IBM Plex Mono", monospace;
+    --dark-purple: #8C0375;
+    --pink: #C004D9;
+    --purple: #9303A6;
+    --violet: #5D04D9;
+    --blue: #03318C;
+    --almost-white: #E5E5E5;
+}
