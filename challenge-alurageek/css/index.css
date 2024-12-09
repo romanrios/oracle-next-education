@@ -25,14 +25,13 @@ main {
 /* Header */
 header {
     display: flex;
-    height: 96px;
     font-family: var(--font-display);
     color: var(--almost-white);
     font-size: 24px;
     background: var(--violet);
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 23px;
     gap: 13px
 }
 
@@ -43,5 +42,29 @@ header img {
 
 /* Footer */
 footer {
+    display: flex;
+    flex-direction: column;
     background: var(--violet);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 64px;
+    gap: 12px;
+}
+
+footer img{
+    height: 32px;
+}
+
+footer span{
+    font-family: var(--font-display);
+    font-size: 24px;
+}
+
+footer p{
+    font-size: 16px;
+}
+
+footer p:nth-of-type(2){
+    font-weight: 200;
 }
