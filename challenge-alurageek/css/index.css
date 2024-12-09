@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&display=swap');
 @import "./reset.css";
 @import "./variables.css";
+@import "./header-footer.css";
 
 /* Main Styles */
 body {
@@ -13,58 +14,81 @@ body {
 h1,
 h2,
 h3 {
+    font-size: 24px;
     font-family: var(--font-display);
 }
 
 main {
     flex: 1;
-}
-
-
-
-/* Header */
-header {
     display: flex;
-    font-family: var(--font-display);
-    color: var(--almost-white);
-    font-size: 24px;
-    background: var(--violet);
-    justify-content: center;
-    align-items: center;
-    padding: 23px;
-    gap: 13px
+    justify-content:space-evenly;
+    padding: 110px 0;
 }
 
-header img {
-    height: 32px;
+section {
+    border: 1px black solid;
 }
 
 
-/* Footer */
-footer {
+
+.products {
     display: flex;
     flex-direction: column;
-    background: var(--violet);
-    color: white;
-    justify-content: center;
     align-items: center;
-    padding: 64px;
-    gap: 12px;
+    max-width: 678px;
 }
 
-footer img{
-    height: 32px;
+.products h2 {
+    padding: 40px 0;
 }
 
-footer span{
-    font-family: var(--font-display);
-    font-size: 24px;
+.products_container {
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow: scroll;
+    gap: 15px;
+
 }
 
-footer p{
+.products_card {
+    background: var(--violet);
+    width: 196px;
+    height: 258px;
+    border-radius: 10px;
+    border: 3px black solid;
+    box-shadow: -5px 6px 3.3px rgba(0, 0, 0, 0.25);
+}
+
+.add-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 472px;
+    padding: 40px;
+    text-align: center;
+}
+
+.add-product_form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+}
+
+.add-product_form input {
+    color: var(--blue);
+    border-radius: 50px;
+    height: 58px;
+    border: 3px solid var(--blue);
+    padding: 0 15px;
+    color: black;
+    font-family: var(--font-text);
+    font-weight: 600;
     font-size: 16px;
 }
 
-footer p:nth-of-type(2){
-    font-weight: 200;
+.add-product_form input::placeholder {
+    color: var(--blue);
 }
