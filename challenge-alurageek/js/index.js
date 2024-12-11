@@ -1,1 +1,3 @@
-console.log("Hola mundo");
+import { showProducts } from "./showProducts.js";
+
+showProducts();

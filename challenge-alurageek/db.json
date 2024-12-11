@@ -2,13 +2,13 @@
     "products": [
         {
             "id": 1,
-            "img": "./assets/gameboy.png",
+            "img": "https://raw.githubusercontent.com/romanrios/oracle-next-education/3a391e97cf3606a816f6e6bf3cbbd9324278c6e6/challenge-alurageek/assets/gameboy.png",
             "name": "Game Boy Classic",
             "value": "129.99"
         },
         {
             "id": 2,
-            "img": "./assets/stormtrooper.jpeg",
+            "img": "https://raw.githubusercontent.com/romanrios/oracle-next-education/refs/heads/main/challenge-alurageek/assets/stormtrooper.jpeg",
             "name": "Stormtrooper",
             "value": "12.00"
         }
