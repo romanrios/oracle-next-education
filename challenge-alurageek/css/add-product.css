@@ -5,6 +5,7 @@
     max-width: 472px;
     padding: 40px;
     text-align: center;
+    min-width: 380px;
 }
 
 .add-product_form {
@@ -30,13 +31,13 @@
     color: var(--blue);
 }
 
-.add-product_button-container{
+.add-product_button-container {
     display: flex;
     justify-content: space-between;
     gap: 13px;
 }
 
-.add-product_form button{
+.add-product_form button {
     flex: 1;
     font-family: var(--font-text);
     font-size: 20px;
@@ -45,17 +46,21 @@
     border: 3px solid var(--blue);
     height: 58px;
     cursor: pointer;
+    transition: all 0.2s ease-in-out;
 }
 
+.add-product_form button:hover {
+    background: var(--pink);
+    border-color: var(--pink);
+    color: white;
+}
 
-
-.add-product_button-send{
+.add-product_button-send {
     background: var(--blue);
     color: white;
 }
 
-.add-product_button-clean{
+.add-product_button-clean {
     background: white;
     color: var(--blue);
 }
-

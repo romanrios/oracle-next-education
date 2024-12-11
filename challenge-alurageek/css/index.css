@@ -23,7 +23,7 @@ h3 {
 main {
     flex: 1;
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: flex-start;
     padding: 110px 0;
     max-width: 1400px;
@@ -31,6 +31,25 @@ main {
     margin: 0 auto;
 }
 
-section {
-    border: 1px black solid;
+@media (max-width: 1366px) {
+    main {        
+        padding: 60px 0;
+        max-width: 1100px;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+        padding: 33px 0 60px 0;
+    }
+
+    .products {
+        order: 1;
+    }
+
+    /* .products_container {
+        box-shadow: none;
+    } */
 }
