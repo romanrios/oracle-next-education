@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="icon" type="image/png" href="./assets/favicon.png">
     <script type="module" src="./js/index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
     <title>AluraGeek</title>
 </head>
 
@@ -19,32 +20,34 @@
     <main>
         <section class="products">
             <h2>MIS PRODUCTOS:</h2>
-            <ul class="products_container" data-list>
+            <div class="products_container_container">
+                <ul class="products_container" data-list>
 
-                <!-- <li class="products_card">
+                    <!-- <li class="products_card">
                     <img class="products_card_img" src="./assets/gameboy.png" />
                     <div class="products_card_info">
                         <p class="products_card_name">Game Boy Classic Classic</p>
                         <div class="products_card_subcontainer">
-                            <p class="products_card_value">$ 100.00</p>
+                            <p class="products_card_price">$ 100.00</p>
                             <img class="products_card_trash" src="./assets/trash_icon.svg" />
                         </div>
                     </div>
                 </li> -->
 
-            </ul>
+                </ul>
+            </div>
         </section>
 
         <section class="add-product">
 
-            <form class="add-product_form" action="">
+            <form class="add-product_form" data-form>
                 <h2>AGREGAR PRODUCTO:</h2>
-                <input type="text" placeholder="nombre...">
-                <input type="text" placeholder="precio...">
-                <input type="text" placeholder="imagen...">
+                <input type="text" placeholder="nombre..." required data-name>
+                <input type="text" placeholder="precio..." required type="number" data-price>
+                <input type="text" placeholder="imagen..." required type="url" data-img>
                 <div class="add-product_button-container">
-                    <button class="add-product_button-send">Enviar</button>
-                    <button class="add-product_button-clean">Limpiar</button>
+                    <button class="add-product_button-send" type="submit">Enviar</button>
+                    <button class="add-product_button-clean" type="reset">Limpiar</button>
                 </div>
             </form>
         </section>
@@ -62,6 +65,26 @@
         <p>ALURA LATAM - 2024</p>
 
     </footer>
+
+    <!-- Modal -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <h2>Editar Producto</h2>
+            <form id="edit-form">
+                <label for="edit-img">URL de la imagen:</label>
+                <input type="text" id="edit-img" name="img" required>
+
+                <label for="edit-name">Nombre del producto:</label>
+                <input type="text" id="edit-name" name="name" required>
+
+                <label for="edit-price">Precio:</label>
+                <input type="number" id="edit-price" name="price" required>
+
+                <button type="submit" id="button-guardar">Guardar cambios</button>
+                <button type="button" id="close-modal">Cancelar</button>
+            </form>
+        </div>
+    </div>
 
 </body>
 

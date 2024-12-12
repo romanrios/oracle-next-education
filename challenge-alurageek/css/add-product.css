@@ -49,18 +49,25 @@
     transition: all 0.2s ease-in-out;
 }
 
-.add-product_form button:hover {
-    background: var(--pink);
-    border-color: var(--pink);
-    color: white;
-}
+
 
 .add-product_button-send {
     background: var(--blue);
     color: white;
 }
 
+.add-product_button-send:hover {
+    background: var(--light-violet);
+    border-color: var(--light-violet);
+    color: white;
+}
+
 .add-product_button-clean {
     background: white;
     color: var(--blue);
+}
+
+.add-product_button-clean:hover {
+    color: var(--violet);
+    border-color: var(--violet);
 }

@@ -4,10 +4,15 @@
 @import "./header-footer.css";
 @import "./products.css";
 @import "./add-product.css";
+@import "./modal.css";
 
 /* Main Styles */
-body {
+
+*{
     font-family: var(--font-text);
+}
+
+body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
