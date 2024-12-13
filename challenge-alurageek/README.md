@@ -2,19 +2,11 @@
 
 Alura Challenge | Oracle Next Education | Desarrollador: Román Ríos
 
-<a href="https://romanrios.github.io/oracle-next-education/challenge-alurageek/" target="_blank">
-  <img src="https://github.com/user-attachments/assets/881b74f1-0349-451a-9439-3a9662fdd910" alt="desktop">
-</a>
-
-
+[![desktop](https://github.com/user-attachments/assets/881b74f1-0349-451a-9439-3a9662fdd910)](https://romanrios.github.io/oracle-next-education/challenge-alurageek/)
 
 ## 🌐 Acceder al Sitio en GitHub Pages
 
-<a href="https://romanrios.github.io/oracle-next-education/challenge-alurageek/" target="_blank">
-  <img src="https://img.shields.io/badge/-Visitar_Sitio_Web-28a745?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Pages">
-</a>
-
-
+[![Ver Sitio en GitHub Pages](https://img.shields.io/badge/-Visitar_Sitio_Web-28a745?style=for-the-badge&logo=github&logoColor=white)](https://romanrios.github.io/oracle-next-education/challenge-alurageek/)
 
 ## 📄 Descripción del Proyecto
 **AluraGeek** es una aplicación web de e-commerce diseñada para que los usuarios puedan visualizar productos, así como gestionar su contenido mediante la creación, edición y eliminación de estos.
@@ -22,9 +14,6 @@ Alura Challenge | Oracle Next Education | Desarrollador: Román Ríos
 El proyecto utiliza **MockAPI** como servidor para simular una base de datos y **SweetAlert2** para proporcionar notificaciones y mensajes interactivos al usuario.
 
 ![image](https://github.com/user-attachments/assets/354b4ea5-5d14-45f5-9e10-005a897ff985)
-
-
-
 
 ## ⚙ Tecnologías Utilizadas
 
@@ -34,7 +23,6 @@ El proyecto utiliza **MockAPI** como servidor para simular una base de datos y *
 ![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white&style=flat)
 ![SweetAlert2](https://img.shields.io/badge/-SweetAlert2-7952B3?style=flat)
 ![MockAPI](https://img.shields.io/badge/-MockAPI-FF7139?style=flat) 
-
 
 ## 🎯 Objetivos
 
@@ -46,7 +34,6 @@ Este challenge tiene como objetivo principal poner en práctica conceptos avanza
 - Manipulación del DOM.
 - Otros principios fundamentales del desarrollo web moderno.
 - Este proyecto no solo enfatiza el uso técnico de JavaScript, sino también el desarrollo de habilidades relacionadas con el diseño de interfaces dinámicas y la interacción con servicios de backend simulados.
-
 
 ## 📱 Versión Móvil
 
