@@ -46,17 +46,22 @@ export function createCard(img, name, price, id) {
     // Evento para editar el producto
     const editButton = product.querySelector(".products_card_edit");
     editButton.addEventListener("click", () => {
-        openModal(id, img, name, price);
+        openEditModal(id, img, name, price);
     });
 
-
-
     return product;
+
 }
+
 
 export async function showProducts() {
     try {
         const listAPI = await connectionAPI.fetchProducts();
+
+        // eliminar todas las cards
+        while (list.firstChild) {
+            list.removeChild(list.firstChild);
+        };
 
         listAPI.forEach(product => {
             list.appendChild(createCard(product.img, product.name, product.price, product.id));
@@ -68,36 +73,47 @@ export async function showProducts() {
 
 
 
-// MODAL
-function openModal(id, img, name, price) {
-    // Asignar los valores actuales al formulario de edición
-    editImgInput.value = img;
-    editNameInput.value = name;
-    editPriceInput.value = price;
-  
-    // Mostrar el modal
-    modal.style.display = "flex";
-  
-    // Manejo del envío del formulario
-    editForm.onsubmit = async (e) => {
-      e.preventDefault();
-      const updatedImg = editImgInput.value;
-      const updatedName = editNameInput.value;
-      const updatedPrice = editPriceInput.value;
-  
-      try {
-        // Aquí llamamos a la API para actualizar el producto
-        await connectionAPI.updateProduct(id, updatedImg, updatedName, updatedPrice);
-        showSuccess("Producto actualizado exitosamente.");
-        modal.style.display = "none"; // Cerrar el modal
-        showProducts(); // Volver a mostrar la lista de productos
-      } catch (error) {
-        showError("Error al actualizar el producto.");
-      }
-    };
-  }
-  
-  // Cerrar el modal cuando se haga clic en el botón de cancelar
-  closeModalButton.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
+
+
+
+async function openEditModal(id, img, name, price) {
+    const { value: formValues } = await Swal.fire({
+        title: 'Editar Producto',
+        html: `      
+            <label for="edit-name">Nombre del producto:</label>
+            <input type="text" id="edit-name" class="swal2-input" value="${name}" required>
+
+            <label for="edit-price">Precio:</label>
+            <input type="number" id="edit-price" class="swal2-input" value="${price}" required>
+
+            <label for="edit-img">URL de la imagen:</label>
+            <input type="text" id="edit-img" class="swal2-input" value="${img}" required>
+        `,
+        focusConfirm: false,
+        showCancelButton: true,
+        confirmButtonText: 'Guardar cambios',
+        cancelButtonText: 'Cancelar',
+        preConfirm: () => {
+            const updatedImg = document.getElementById('edit-img').value;
+            const updatedName = document.getElementById('edit-name').value;
+            const updatedPrice = document.getElementById('edit-price').value;
+
+            if (!updatedImg || !updatedName || !updatedPrice) {
+                Swal.showValidationMessage('Todos los campos son obligatorios');
+                return false;
+            }
+
+            return { img: updatedImg, name: updatedName, price: updatedPrice };
+        }
+    });
+
+    if (formValues) {
+        try {
+            await connectionAPI.updateProduct(id, formValues.img, formValues.name, formValues.price);
+            showSuccess("Producto actualizado exitosamente.");
+            showProducts(); // Refrescar lista de productos
+        } catch (error) {
+            showError("Error al actualizar el producto.");
+        }
+    }
+}

@@ -12,7 +12,7 @@
 .products_container {
     /* height: 50vh; */
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     /* overflow: scroll; */
     gap: 15px;
@@ -24,7 +24,8 @@
     flex: 1 1 auto;
     background: var(--violet);
     color: white;
-    width: 196px;
+    /* width: 196px; */
+    max-width: 250px;
     height: 258px;
     border-radius: 10px;
     border: 3px black solid;
@@ -49,6 +50,8 @@
     object-fit: cover;
     aspect-ratio: 1 / 1;
     max-height: 180px;
+    min-width: 180px;
+    min-height: 180px;
 }
 
 .products_card_info {

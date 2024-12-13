@@ -8,7 +8,7 @@
 
 /* Main Styles */
 
-*{
+* {
     font-family: var(--font-text);
 }
 
@@ -37,7 +37,7 @@ main {
 }
 
 @media (max-width: 1366px) {
-    main {        
+    main {
         padding: 60px 0;
         max-width: 1100px;
     }
