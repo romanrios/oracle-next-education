@@ -2,7 +2,7 @@
 
 Alura Challenge | Oracle Next Education | Desarrollador: Román Ríos
 
-![desktop](https://github.com/user-attachments/assets/881b74f1-0349-451a-9439-3a9662fdd910)
+[![desktop](https://github.com/user-attachments/assets/881b74f1-0349-451a-9439-3a9662fdd910)](https://romanrios.github.io/oracle-next-education/challenge-alurageek/)
 
 
 ## 🌐 Acceder al Sitio en GitHub Pages
