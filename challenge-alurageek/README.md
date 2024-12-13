@@ -10,17 +10,15 @@ Alura Challenge | Oracle Next Education | Desarrollador: Román Ríos
 [![Ver Sitio en GitHub Pages](https://img.shields.io/badge/-Visitar_Sitio_Web-28a745?style=for-the-badge&logo=github&logoColor=white)](https://romanrios.github.io/oracle-next-education/challenge-alurageek/)
 
 
+
 ## 📄 Descripción del Proyecto
 **AluraGeek** es una aplicación web de e-commerce diseñada para que los usuarios puedan visualizar productos, así como gestionar su contenido mediante la creación, edición y eliminación de estos.
 
-El proyecto utiliza **MockAPI** como servidor para simular una base de datos y **SweetAlert2** para proporcionar notificaciones y mensajes interactivos al usuario. Este challenge tiene como objetivo principal poner en práctica conceptos avanzados de JavaScript, incluyendo:
+El proyecto utiliza **MockAPI** como servidor para simular una base de datos y **SweetAlert2** para proporcionar notificaciones y mensajes interactivos al usuario.
 
-- Programación asíncrona.
-- Manejo de solicitudes HTTP.
-- Validación de formularios.
-- Manipulación del DOM.
-- Otros principios fundamentales del desarrollo web moderno.
-- Este proyecto no solo enfatiza el uso técnico de JavaScript, sino también el desarrollo de habilidades relacionadas con el diseño de interfaces dinámicas y la interacción con servicios de backend simulados.
+![image](https://github.com/user-attachments/assets/354b4ea5-5d14-45f5-9e10-005a897ff985)
+
+
 
 
 ## ⚙ Tecnologías Utilizadas
@@ -32,6 +30,21 @@ El proyecto utiliza **MockAPI** como servidor para simular una base de datos y *
 ![SweetAlert2](https://img.shields.io/badge/-SweetAlert2-7952B3?style=flat)
 ![MockAPI](https://img.shields.io/badge/-MockAPI-FF7139?style=flat) 
 
+
+## 🎯 Objetivos
+
+Este challenge tiene como objetivo principal poner en práctica conceptos avanzados de JavaScript, incluyendo:
+
+- Programación asíncrona.
+- Manejo de solicitudes HTTP.
+- Validación de formularios.
+- Manipulación del DOM.
+- Otros principios fundamentales del desarrollo web moderno.
+- Este proyecto no solo enfatiza el uso técnico de JavaScript, sino también el desarrollo de habilidades relacionadas con el diseño de interfaces dinámicas y la interacción con servicios de backend simulados.
+
+
 ## 📱 Versión Móvil
 
 ![mobile](https://github.com/user-attachments/assets/b0e8bb33-8ca6-4e20-bb8f-0501062ee0c2)
+
+
