@@ -42,9 +42,9 @@
 
             <form class="add-product_form" data-form>
                 <h2>AGREGAR PRODUCTO:</h2>
-                <input type="text" placeholder="nombre..." required data-name>
-                <input type="text" placeholder="precio..." required type="number" data-price>
-                <input type="text" placeholder="imagen..." required type="url" data-img>
+                <input type="text" placeholder="nombre..." maxlength="18" required data-name>
+                <input type="text" placeholder="precio..." maxlength="7" required data-price>
+                <input type="url" placeholder="imagen..." maxlength="300" required data-img>
                 <div class="add-product_button-container">
                     <button class="add-product_button-send" type="submit">Enviar</button>
                     <button class="add-product_button-clean" type="reset">Limpiar</button>

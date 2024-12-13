@@ -81,13 +81,13 @@ async function openEditModal(id, img, name, price) {
         title: 'Editar Producto',
         html: `      
             <label for="edit-name">Nombre del producto:</label>
-            <input type="text" id="edit-name" class="swal2-input" value="${name}" required>
+            <input type="text" id="edit-name" class="swal2-input" maxlength="18" value="${name}" required>
 
             <label for="edit-price">Precio:</label>
-            <input type="number" id="edit-price" class="swal2-input" value="${price}" required>
+            <input type="text" id="edit-price" class="swal2-input" maxlength="7" value="${price}" required>
 
             <label for="edit-img">URL de la imagen:</label>
-            <input type="text" id="edit-img" class="swal2-input" value="${img}" required>
+            <input type="url" id="edit-img" class="swal2-input" maxlength="300" value="${img}" required>
         `,
         focusConfirm: false,
         showCancelButton: true,
@@ -96,16 +96,32 @@ async function openEditModal(id, img, name, price) {
         preConfirm: () => {
             const updatedImg = document.getElementById('edit-img').value;
             const updatedName = document.getElementById('edit-name').value;
-            const updatedPrice = document.getElementById('edit-price').value;
+            let updatedPrice = document.getElementById('edit-price').value;
+
+
+
+            // Validación del precio: solo permite números, coma y punto
+            const priceRegex = /^[0-9,\.]+$/; // Solo números, comas y puntos
+            if (!updatedPrice.match(priceRegex)) {
+                Swal.showValidationMessage('El precio solo puede contener números, coma y punto');
+                return false;
+            }
+
+
 
             if (!updatedImg || !updatedName || !updatedPrice) {
                 Swal.showValidationMessage('Todos los campos son obligatorios');
                 return false;
             }
 
+            // Asegurarse de que el precio tiene dos decimales
+            updatedPrice = formatPrice(updatedPrice);
+
             return { img: updatedImg, name: updatedName, price: updatedPrice };
         }
     });
+
+
 
     if (formValues) {
         try {
@@ -116,4 +132,29 @@ async function openEditModal(id, img, name, price) {
             showError("Error al actualizar el producto.");
         }
     }
+}
+
+
+
+
+
+
+
+
+
+// Función para asegurar que el precio tenga dos decimales
+function formatPrice(price) {
+    // Reemplazar la coma por punto para poder manipular el valor como número
+    price = price.replace(",", ".");
+
+    // Convertir el valor a un número flotante
+    let formattedPrice = parseFloat(price);
+
+    // Verificar si el precio es un número válido
+    if (isNaN(formattedPrice)) {
+        return NaN; // Si no es un número válido, retornar NaN
+    }
+
+    // Formatear el precio para tener siempre dos decimales
+    return formattedPrice.toFixed(2).replace(".", ","); // Reemplazar punto por coma
 }
