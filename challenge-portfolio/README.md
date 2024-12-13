@@ -1,6 +1,6 @@
 # Challenge ONE | Front End -  Portafolio
 
-Alura Challenge | Oracle Next Education | Autor: Román Ríos
+Alura Challenge | Oracle Next Education | Desarrollador: Román Ríos
 
 ![screenshot](https://github.com/user-attachments/assets/39f3f2ea-939b-4452-9c74-5d1b5a807b00)
 
