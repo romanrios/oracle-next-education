@@ -1,0 +1,27 @@
+.OptionList {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    max-width: 930px;
+    gap: 8px;
+}
+
+.OptionList label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.OptionList select {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    padding: 30px 21px;
+    border: none;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.06);
+    appearance: none;
+    background: url('./img/arrow_drop_down.svg') no-repeat right 30px center;
+    background-color: #ffffff;
+    background-size: 16px;
+    outline-color: #6278F7;
+}

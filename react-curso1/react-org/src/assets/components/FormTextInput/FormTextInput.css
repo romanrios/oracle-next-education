@@ -1,0 +1,23 @@
+.formTextInput {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%;
+    max-width: 930px;
+    gap: 8px;
+}
+
+.formTextInput label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.formTextInput input {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+    padding: 30px 21px;
+    border: none;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.06);
+    outline-color: #6278F7;
+    background-color: white;
+}

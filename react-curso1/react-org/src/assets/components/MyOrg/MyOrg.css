@@ -1,0 +1,33 @@
+.MyOrg {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 80px 0;
+}
+
+.MyOrg .MyOrg_container {
+    max-width: 1121px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.MyOrg h2 {
+    font-size: 40px;
+    color: #6278F7;
+    padding-bottom: 24px;
+    border-bottom: 4px solid #6278F7;
+
+    position: absolute;
+    /* Sacamos este elemento del flujo normal */
+    left: 50%;
+    /* Lo movemos al 50% del contenedor */
+    transform: translateX(-50%);
+    /* Lo centramos ajustando su posición */
+}
+
+.MyOrg img {
+    margin-left: auto;
+    cursor: pointer;
+}
