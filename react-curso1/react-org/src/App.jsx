@@ -7,12 +7,18 @@ import { MyOrg } from './assets/components/MyOrg/MyOrg';
 
 export const App = () => {
 
+  const [showForm, setShowForm] = useState(true);
+
+  const switchShowForm = () => {
+    setShowForm(!showForm);
+  };
+
   return (
     <div className="App">
       <Header />
       <main>
-        <Form />
-        <MyOrg />
+        {showForm && <Form />}
+        <MyOrg switchShowForm={switchShowForm} />
       </main>
       <Footer />
     </div>

@@ -1,6 +1,7 @@
 import './OptionList.css';
 
-export const OptionList = () => {
+export const OptionList = (props) => {
+
     const options = [
         { value: "programacion", label: "Programación" },
         { value: "frontend", label: "Front End" },
@@ -11,14 +12,18 @@ export const OptionList = () => {
         { value: "innovacionygestion", label: "Innovación y Gestión" }
     ];
 
+    const handleChange = (e) => {
+        props.setValue(e.target.value);
+    };
+
     return (
         <div className='OptionList'>
             <label>Equipo</label>
-            <select defaultValue="">
+            <select value={props.value} defaultValue="" onChange={handleChange} required>
                 <option value="" disabled>Seleccione una opción</option>
                 {options.map((option, index) => (
                     <option key={index} value={option.value}>
-                        Equipo {index+1} - {option.label}
+                        Equipo {index + 1} - {option.label}
                     </option>
                 ))}
             </select>
