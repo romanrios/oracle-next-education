@@ -19,7 +19,7 @@ export const OptionList = (props) => {
     return (
         <div className='OptionList'>
             <label>Equipo</label>
-            <select value={props.value} defaultValue="" onChange={handleChange} required>
+            <select value={props.value} onChange={handleChange} required>
                 <option value="" disabled>Seleccione una opción</option>
                 {options.map((option, index) => (
                     <option key={index} value={option.value}>

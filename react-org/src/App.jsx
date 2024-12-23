@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import './App.css';
-import { Header } from './assets/components/Header/Header';
-import { Form } from './assets/components/Form/Form';
-import { Footer } from './assets/components/Footer/Footer';
-import { MyOrg } from './assets/components/MyOrg/MyOrg';
+import { Header } from './components/Header/Header';
+import { Form } from './components/Form/Form';
+import { Footer } from './components/Footer/Footer';
+import { MyOrg } from './components/MyOrg/MyOrg';
+import { Team } from './components/Team/Team';
 
 export const App = () => {
 
@@ -19,6 +20,7 @@ export const App = () => {
       <main>
         {showForm && <Form />}
         <MyOrg switchShowForm={switchShowForm} />
+        <Team />
       </main>
       <Footer />
     </div>

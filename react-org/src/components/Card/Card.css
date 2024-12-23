@@ -1,0 +1,41 @@
+.Card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 262px;
+    height: 272px;
+    position: relative;
+    gap: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.Card_color {
+    width: 100%;
+    height: 92px;
+    background-color: #57C278;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.Card img {
+    width: 120px;
+    border-radius: 50%;
+    z-index: 2;
+    margin-top: 32px;
+}
+
+.Card h3 {
+    font-family: Montserrat, sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #6278F7;
+}
+
+.Card p {
+    font-family: Montserrat, sans-serif;
+    font-size: 16px;
+}
