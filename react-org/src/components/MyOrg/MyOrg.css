@@ -31,3 +31,27 @@
     margin-left: auto;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    .MyOrg .MyOrg_container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .MyOrg {
+        padding: 40px 0;
+    }
+
+    .MyOrg h2 {
+        font-size: 32px;
+        position: inherit;
+        left: 0;
+        transform: translateX(0);
+    }
+
+    .MyOrg img {
+        margin-left: inherit;
+        cursor: pointer;
+    }
+}

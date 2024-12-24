@@ -1,27 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import './Team.css';
 import { Card } from '../Card/Card';
+import hexToRgba from 'hex-to-rgba';
 
 export const Team = (props) => {
     const [members, setMembers] = useState(props.members);
 
     useEffect(() => {
-        members.forEach((member, index) => {
-            const img = new Image();
-            img.src = member.img;
-            img.onerror = () => {
-                const updatedMembers = [...members];
-                updatedMembers[index].img = './img/profile.jpeg';
-                setMembers(updatedMembers);
-            };
-        });
-    }, []);
+        setMembers(props.members);
+    }, [props.members]);
 
-    return <section className='Team' style={{ backgroundColor: props.colorSecondary }}>
-        <h2 style={{ borderColor: props.colorPrimary }}>{props.title}</h2>
+    return <section className='Team' style={{ backgroundColor: hexToRgba(props.color, 0.2) }}>
+        <input
+            className='Team_input_color'
+            type="color"
+            value={props.color}
+            onChange={(e) => props.changeColor(props.id, e.target.value)}
+        />
+        <h2 style={{ borderColor: props.color }}>{props.title}</h2>
         <div className='Team_cards_container'>
-            {members.map((member, index) => (
-                <Card key={index} name={member.name} charge={member.charge} img={member.img} color={props.colorPrimary} />
+            {members.map((member) => (
+                <Card
+                    id={member.id}
+                    key={member.id}
+                    name={member.name}
+                    charge={member.charge}
+                    img={member.img}
+                    color={props.color}
+                    removeMember={props.removeMember}
+                />
             ))}
         </div>
     </section>

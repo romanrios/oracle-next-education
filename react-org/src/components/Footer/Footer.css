@@ -1,10 +1,34 @@
 .footer {
-    background-color: #6278F7;
-    text-align: center;
+    position: relative;
     width: 100%;
+    height: 200px;
+    /* background-image: url('./img/footer.png'); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
 }
 
 .footer img {
+    display: fixed;
     width: 100%;
     max-width: 1280px;
+}
+
+.footer p {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.footer_icons_container {
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+    gap: 40px;
 }

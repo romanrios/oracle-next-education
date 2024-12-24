@@ -12,6 +12,22 @@
     padding: 0 10px 10px 10px;
 }
 
+.Card_icon_delete {
+    top: 12px;
+    right: 12px;
+    position: absolute;
+    color: white;
+    font-size: 28px;
+    z-index: 3;
+    cursor: pointer;
+    opacity: 0.85;
+
+}
+
+.Card_icon_delete:hover {
+    opacity: 1;
+}
+
 .Card_color {
     width: 100%;
     height: 92px;
@@ -24,6 +40,10 @@
 
 .Card img {
     width: 120px;
+    height: 120px;
+    min-height: 120px;
+    object-fit: cover;
+    object-position: center;
     border-radius: 50%;
     z-index: 2;
     margin-top: 32px;

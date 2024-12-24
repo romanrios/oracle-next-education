@@ -1,10 +1,10 @@
 .header {
     background-color: #6278F7;
-    text-align: center;
-    width: 100%;
+    justify-content: center;
+    display: flex;
 }
 
 .header img {
-    width: 100%;
-    max-width: 1280px;
+    max-height: 400px;
+    max-width: 100%;
 }
