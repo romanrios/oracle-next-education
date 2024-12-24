@@ -4,14 +4,19 @@
     justify-content: center;
     align-items: center;
     background-color: #D9F7E9;
+    padding: 34px 16px 39px 16px;
 }
 
 .Team h2{
     font-size: 32px;
+    border-bottom: solid 3px;
+    padding-bottom: 10px;
+    margin-bottom: 38px;
 }
 
 .Team_cards_container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap:24px;
 }

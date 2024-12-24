@@ -5,10 +5,11 @@
     width: 262px;
     height: 272px;
     position: relative;
-    gap: 10px;
     border-radius: 10px;
     overflow: hidden;
     background-color: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 0 10px 10px 10px;
 }
 
 .Card_color {
@@ -26,6 +27,7 @@
     border-radius: 50%;
     z-index: 2;
     margin-top: 32px;
+    margin-bottom: 28px;
 }
 
 .Card h3 {
@@ -33,9 +35,14 @@
     font-size: 18px;
     font-weight: 600;
     color: #6278F7;
+    margin-bottom: 0;
 }
 
 .Card p {
     font-family: Montserrat, sans-serif;
     font-size: 16px;
+    text-align: center;
+    display: flex;
+    height: 100%;
+    align-items: center;
 }

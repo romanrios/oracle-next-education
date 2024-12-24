@@ -4,7 +4,7 @@ import { OptionList } from '../OptionList/OptionList';
 import { Button } from '../Button/Button';
 import { useState } from 'react';
 
-export const Form = () => {
+export const Form = (props) => {
 
     const [nombre, setNombre] = useState('');
     const [puesto, setPuesto] = useState('');
@@ -29,7 +29,7 @@ export const Form = () => {
                 <FormTextInput label='Nombre' placeholder='Ingresar nombre' required value={nombre} setValue={setNombre} />
                 <FormTextInput label='Puesto' placeholder='Ingresar puesto' required value={puesto} setValue={setPuesto} />
                 <FormTextInput label='Foto' placeholder='Ingresar enlace de foto' required value={foto} setValue={setFoto} />
-                <OptionList value={equipo} setValue={setEquipo} />
+                <OptionList value={equipo} setValue={setEquipo} teams={props.teams} />
                 <Button>Crear</Button>
             </div>
         </form>
