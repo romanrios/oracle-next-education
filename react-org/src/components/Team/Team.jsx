@@ -28,6 +28,8 @@ export const Team = (props) => {
                     img={member.img}
                     color={props.color}
                     removeMember={props.removeMember}
+                    likeMember={props.likeMember}
+                    fav={member.fav}
                 />
             ))}
         </div>

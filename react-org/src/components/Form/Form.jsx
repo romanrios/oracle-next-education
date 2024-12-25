@@ -3,6 +3,7 @@ import { FormTextInput } from '../FormTextInput/FormTextInput';
 import { OptionList } from '../OptionList/OptionList';
 import { Button } from '../Button/Button';
 import { useState } from 'react';
+import { toast } from 'react-toastify';
 
 export const Form = (props) => {
 
@@ -12,7 +13,7 @@ export const Form = (props) => {
     const [team, setTeam] = useState('');
 
     const [title, setTitle] = useState('');
-    const [color, setColor] = useState('#57C278');
+    const [color, setColor] = useState('#D9F7E9');
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -22,8 +23,12 @@ export const Form = (props) => {
             img,
             team
         }
-        // alert(JSON.stringify(formData));
         props.addMember(formData);
+        toast.success("Se ha creado el colaborador " + formData.name)
+        setName('');
+        setCharge('');
+        setImg('');
+        setTeam('');
     }
 
     const handleSubmitTeam = (e) => {
@@ -32,8 +37,9 @@ export const Form = (props) => {
             title,
             color
         }
-        // alert(JSON.stringify(formData));
         props.addTeam(formData);
+        toast.success("Se ha creado el equipo " + formData.title);
+        setTitle('');
     }
 
     return <section className='form'>

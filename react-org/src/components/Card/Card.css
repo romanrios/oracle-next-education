@@ -66,3 +66,17 @@
     height: 100%;
     align-items: center;
 }
+
+.Card_icon_heart{
+    font-size: 150px;
+    cursor: pointer;
+    color: rgb(223, 34, 97);
+}
+
+.not_liked{
+    color: rgb(158, 155, 156);
+}
+
+[class^="swal2-"] {
+    font-family: 'Montserrat', sans-serif;
+}

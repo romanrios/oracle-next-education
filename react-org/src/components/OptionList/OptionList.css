@@ -21,7 +21,7 @@
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.06);
     appearance: none;
     /* background: url('./img/arrow_drop_down.svg') no-repeat right 30px center; */
-    background-color: #ffffff;
+    background-color: #ffffff !important;
     background-size: 16px;
     outline-color: #6278F7;
 }
