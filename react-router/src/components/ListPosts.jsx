@@ -19,7 +19,7 @@ export const ListPosts = (props) => {
 
     return <section className="posts container">
         {posts.map((post) =>
-            <Link to={`post/${post.id}`} key={post.id} className={`post__card post-card--${post.categoria}`}>
+            <Link to={`/post/${post.id}`} key={post.id} className={`post__card post-card--${post.categoria}`}>
                 <h3 className="post-card__title">{post.title}</h3>
                 <p className="post-card__meta">{post.metadescription}</p>
             </Link>
