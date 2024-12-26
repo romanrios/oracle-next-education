@@ -6,16 +6,18 @@ import { Page404 } from './pages/Page404';
 import { Header } from './components/Header';
 import { Post } from './pages/Post';
 import { Routes, Route } from 'react-router-dom';
+import { Categoria } from './pages/Categoria';
 
 function App() {
   return (
     <div className="App">
-      <Header/>
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<Sobre />} />
-        <Route path="*" element={<Page404 />} />
         <Route path="/post/:id" element={<Post />} />
+        <Route path="/categoria/:id/*" element={<Categoria />} />
+        <Route path="*" element={<Page404 />} />
       </Routes>
     </div>
   );

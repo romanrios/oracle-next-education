@@ -11,17 +11,10 @@ export const Post = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        buscar('/posts', (data) => {
-            const foundPost = data.find(post => post.id == id);
-            if (foundPost) {
-                setPost(foundPost);
-            } else {
-                navigate("/not-found");
-            }
-        }).catch(() => {
-            navigate("/not-found");
-        });
-    }, [id, navigate]);
+        buscar(`/posts/${id}`, setPost).catch(() => {
+            navigate("/not-found")
+        })
+    }, [id])
 
     if (!post) {
         return <div className="container flex flex--center" style={{ marginTop: '50px' }}>
