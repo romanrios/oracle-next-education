@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const BannerEstilizado = styled.div`
-    background-image: url('/imagenes/banner.png');
+    background-image: url('./imagenes/banner.png');
     width: 100%;
     display: flex;
     align-items: center;

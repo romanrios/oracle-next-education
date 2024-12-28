@@ -265,7 +265,7 @@ html {
    list-style: none;
    width: 236px;
 `,om=()=>z.jsx("aside",{children:z.jsx("nav",{children:z.jsxs(rm,{children:[z.jsx(Gr,{iconoActivo:"./iconos/home-activo.png",iconoInactivo:"./iconos/home-inactivo.png",activo:!0,children:"Inicio"}),z.jsx(Gr,{iconoActivo:"./iconos/mas-vistas-activo.png",iconoInactivo:"./iconos/mas-vistas-inactivo.png",children:"Más vistas"}),z.jsx(Gr,{iconoActivo:"./iconos/me-gusta-activo.png",iconoInactivo:"./iconos/me-gusta-inactivo.png",children:"Más Me Gusta"}),z.jsx(Gr,{iconoActivo:"./iconos/nuevas-activo.png",iconoInactivo:"./iconos/nuevas-inactivo.png",children:"Nuevas"}),z.jsx(Gr,{iconoActivo:"./iconos/sorprendeme-activo.png",iconoInactivo:"./iconos/sorprendeme-inactivo.png",children:"Sorpréndeme"})]})})}),im=fe.div`
-    background-image: url('/imagenes/banner.png');
+    background-image: url('./imagenes/banner.png');
     width: 100%;
     display: flex;
     align-items: center;
