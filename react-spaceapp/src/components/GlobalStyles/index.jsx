@@ -157,4 +157,14 @@ html {
   [hidden] {
     display: none;
   }
+
+
+
+  /* Aplica box-sizing: border-box a todos los elementos */
+  *,
+  *::before,
+  *::after
+  {
+    box-sizing: border-box;
+    }
 `;
