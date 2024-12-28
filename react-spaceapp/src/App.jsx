@@ -7,7 +7,7 @@ import { Galeria } from "./components/Galeria"
 import fotos from "./fotos.json"
 import { useState } from "react"
 import { ModalZoom } from "./components/ModalZoom"
-// import Pie from "./components/Pie"
+import { Pie } from "./components/Pie"
 
 const FondoGradiente = styled.div`
 background: linear-gradient(175deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
@@ -69,7 +69,7 @@ export const App = () => {
         <ModalZoom foto={fotoSeleccionada}
           alCerrar={() => setFotoSeleccionada(null)}
           alAlternarFavorito={alAlternarFavorito} />
-        {/* <Pie /> */}
+        <Pie />
       </FondoGradiente>
     </>
   )
