@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import styled from "styled-components"
 import { GlobalStyles } from "./components/GlobalStyles"
 import { Cabecera } from "./components/Cabecera"
@@ -17,11 +18,15 @@ min-height:100vh;
 const AppContainer = styled.div`
   width:1280px;
   max-width:100%;
-margin: 0 auto;
+  margin: 0 auto;
+  padding: 0 15px;
 `
 const MainContainer = styled.main`
   display: flex;
   gap:24px;
+  @media (max-width:768px){
+    flex-direction: column;
+  }
 `
 const ContenidoGaleria = styled.section`
   display: flex;
@@ -32,6 +37,20 @@ const ContenidoGaleria = styled.section`
 export const App = () => {
   const [fotosDeGaleria, setFotosDeGaleria] = useState(fotos)
   const [fotoSeleccionada, setFotoSeleccionada] = useState(null)
+
+  //
+  const [filtro, setFiltro] = useState('')
+  const [tag, setTag] = useState(0)
+
+  useEffect(() => {
+    const fotosFiltradas = fotos.filter(foto => {
+      const filtroPorTag = !tag || foto.tagId === tag;
+      const filtroPorTitulo = !filtro || foto.titulo.toLowerCase().includes(filtro.toLowerCase())
+      return filtroPorTag && filtroPorTitulo
+    })
+    setFotosDeGaleria(fotosFiltradas)
+  }, [filtro, tag])
+  //
 
   const alAlternarFavorito = (foto) => {
 
@@ -56,13 +75,21 @@ export const App = () => {
       <FondoGradiente>
         <GlobalStyles />
         <AppContainer>
-          <Cabecera />
+          <Cabecera
+            filtro={filtro}
+            setFiltro={setFiltro}
+          />
           <MainContainer>
             <BarraLateral />
             <ContenidoGaleria>
               <Banner />
 
-              <Galeria alSeleccionarFoto={foto => setFotoSeleccionada(foto)} fotos={fotosDeGaleria} alAlternarFavorito={alAlternarFavorito} />
+              <Galeria
+                fotos={fotosDeGaleria}
+                alSeleccionarFoto={foto => setFotoSeleccionada(foto)}
+                alAlternarFavorito={alAlternarFavorito}
+                setTag={setTag}
+              />
             </ContenidoGaleria>
           </MainContainer>
         </AppContainer>

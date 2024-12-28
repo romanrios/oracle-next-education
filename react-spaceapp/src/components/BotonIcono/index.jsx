@@ -8,4 +8,8 @@ export const BotonIcono = styled.button`
     background-color: transparent;
     border: none;
     cursor: pointer;
+    opacity:0.8;
+    &:hover {
+        opacity:1;
+    }
 `

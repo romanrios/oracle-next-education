@@ -4,8 +4,12 @@ import tags from './tags.json'
 const TagsContainer = styled.section`
     display: flex;
     align-items: center;
-    gap: 64px;
+    gap: 16px;
     margin-top: 56px;
+    @media (max-width: 1080px){
+        flex-direction: column;
+        align-items: start;
+    }
 `
 
 const TagTitulo = styled.h3`
@@ -21,7 +25,7 @@ const Tag = styled.button`
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    padding: 12px;
+    padding: 8px 12px;
     box-sizing: border-box;
     border: 2px solid transparent;
     &:hover {
@@ -32,15 +36,15 @@ const Tag = styled.button`
 const Div = styled.div`
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 10px;
     /* justify-content: end; */
 `
 
-export const Tags = () => {
+export const Tags = ({ setTag }) => {
     return <TagsContainer>
         <TagTitulo>Busque por tags:</TagTitulo>
         <Div>
-            {tags.map(tag => <Tag key={tag.id}>{tag.titulo}</Tag>)}
+            {tags.map(tag => <Tag key={tag.id} onClick={() => setTag(tag.tag)} >{tag.titulo}</Tag>)}
         </Div>
     </TagsContainer>
 }

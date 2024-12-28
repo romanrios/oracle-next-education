@@ -7,6 +7,9 @@ import { Imagen } from "./Imagen"
 const GaleriaContainer = styled.div`
 display: flex;
 gap: 24px;
+@media(max-width:916px){
+flex-direction: column
+};
 `
 
 const SeccionFluida = styled.section`
@@ -20,11 +23,11 @@ const ImagenesContainer = styled.section`
 `
 
 
-export const Galeria = ({ fotos = [], alSeleccionarFoto, alAlternarFavorito }) => {
+export const Galeria = ({ fotos = [], setTag, alSeleccionarFoto, alAlternarFavorito }) => {
 
     return (
         <>
-            <Tags />
+            <Tags setTag={setTag} />
             <GaleriaContainer>
                 <SeccionFluida>
                     <Titulo>Navegue por la galería</Titulo>

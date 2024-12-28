@@ -18,6 +18,11 @@ const PieEstilizado = styled.footer`
         padding: 32px 22px;
         width: 100%;
         max-width: 1280px;
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px
+        }
     }
 `;
 
@@ -27,9 +32,10 @@ const IconoContainer = styled.ul`
 	list-style: none;
 	li {
     	display: inline-block;
-    	margin-right: 32px;
+    	margin: 0 16px;
 	}
     a{
+        font-size: 18px;
         color: white;
     }
     a:hover{
