@@ -1,14 +1,12 @@
-import { useEffect } from "react"
 import styled from "styled-components"
 import { GlobalStyles } from "./components/GlobalStyles"
 import { Cabecera } from "./components/Cabecera"
 import { BarraLateral } from "./components/BarraLateral"
 import { Banner } from "./components/Banner"
 import { Galeria } from "./components/Galeria"
-import fotos from "./fotos.json"
-import { useState } from "react"
 import { ModalZoom } from "./components/ModalZoom"
 import { Pie } from "./components/Pie"
+import { GlobalContextProvider } from "./context/GlobalContext"
 
 const FondoGradiente = styled.div`
 background: linear-gradient(175deg, #041833 4.16%, #04244F 48%, #154580 96.76%);
@@ -35,69 +33,26 @@ const ContenidoGaleria = styled.section`
 `
 
 export const App = () => {
-  const [fotosDeGaleria, setFotosDeGaleria] = useState(fotos)
-  const [fotoSeleccionada, setFotoSeleccionada] = useState(null)
 
-  //
-  const [filtro, setFiltro] = useState('')
-  const [tag, setTag] = useState(0)
+  return <>
+    <FondoGradiente>
+      <GlobalStyles />
+      <GlobalContextProvider>
 
-  useEffect(() => {
-    const fotosFiltradas = fotos.filter(foto => {
-      const filtroPorTag = !tag || foto.tagId === tag;
-      const filtroPorTitulo = !filtro || foto.titulo.toLowerCase().includes(filtro.toLowerCase());
-      return filtroPorTag && filtroPorTitulo;
-    });
-    setFotosDeGaleria(fotosFiltradas);
-  }, [filtro, tag]);
-  //
-
-  const alAlternarFavorito = (foto) => {
-
-    if (foto.id === fotoSeleccionada?.id) {
-      setFotoSeleccionada({
-        ...fotoSeleccionada,
-        favorita: !fotoSeleccionada.favorita
-      })
-
-    }
-
-    setFotosDeGaleria(fotosDeGaleria.map(fotoDeGaleria => {
-      return {
-        ...fotoDeGaleria,
-        favorita: fotoDeGaleria.id === foto.id ? !foto.favorita : fotoDeGaleria.favorita
-      }
-    }))
-  }
-
-  return (
-    <>
-      <FondoGradiente>
-        <GlobalStyles />
         <AppContainer>
-          <Cabecera
-            filtro={filtro}
-            setFiltro={setFiltro}
-          />
+          <Cabecera />
           <MainContainer>
             <BarraLateral />
             <ContenidoGaleria>
               <Banner />
-
-              <Galeria
-                fotos={fotosDeGaleria}
-                alSeleccionarFoto={foto => setFotoSeleccionada(foto)}
-                alAlternarFavorito={alAlternarFavorito}
-                setTag={setTag}
-              />
+              <Galeria />
             </ContenidoGaleria>
           </MainContainer>
         </AppContainer>
-        <ModalZoom foto={fotoSeleccionada}
-          alCerrar={() => setFotoSeleccionada(null)}
-          alAlternarFavorito={alAlternarFavorito} />
+        <ModalZoom />
         <Pie />
-      </FondoGradiente>
-    </>
-  )
+
+      </GlobalContextProvider>
+    </FondoGradiente>
+  </>
 }

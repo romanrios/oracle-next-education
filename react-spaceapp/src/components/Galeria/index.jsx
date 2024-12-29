@@ -3,6 +3,9 @@ import { Titulo } from "../Titulo"
 import { Populares } from "./Populares"
 import { Tags } from "./Tags"
 import { Imagen } from "./Imagen"
+import { Loader } from "../Loader"
+import { useContext } from "react"
+import { GlobalContext } from "../../context/GlobalContext"
 
 const GaleriaContainer = styled.div`
 display: flex;
@@ -20,29 +23,28 @@ const ImagenesContainer = styled.section`
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    span{
+        margin-top: 50px;
+    }
 `
 
-
-export const Galeria = ({ fotos = [], setTag, alSeleccionarFoto, alAlternarFavorito }) => {
-
-    return (
-        <>
-            <Tags setTag={setTag} />
-            <GaleriaContainer>
-                <SeccionFluida>
-                    <Titulo>Navegue por la galería</Titulo>
-                    <ImagenesContainer>
-                        {fotos.map(foto => <Imagen
-                            alAlternarFavorito={alAlternarFavorito}
-                            alSolicitarZoom={alSeleccionarFoto}
-                            key={foto.id}
-                            foto={foto} />)
-                        }
-                    </ImagenesContainer>
-                </SeccionFluida>
-                <Populares />
-
-            </GaleriaContainer>
-        </>
-    )
+export const Galeria = () => {
+    const { setTag, fotosDeGaleria } = useContext(GlobalContext);
+    
+    return <>
+        <Tags setTag={setTag} />
+        <GaleriaContainer>
+            <SeccionFluida>
+                <Titulo>Navegue por la galería</Titulo>
+                <ImagenesContainer>
+                    {
+                        fotosDeGaleria == ""
+                            ? <Loader />
+                            : fotosDeGaleria.map(foto => <Imagen key={foto.id} foto={foto} />)
+                    }
+                </ImagenesContainer>
+            </SeccionFluida>
+            <Populares />
+        </GaleriaContainer>
+    </>
 }

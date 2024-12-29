@@ -1,4 +1,6 @@
+import { useContext, useRef } from 'react';
 import styled from "styled-components"
+import { GlobalContext } from '../../context/GlobalContext';
 
 const ContainerEstilizado = styled.div`
     position: relative;
@@ -33,14 +35,37 @@ const IconoLupa = styled.img`
     right: 10px;
     width: 38px !important;
     height: 38px;
+    cursor: pointer;
+    &:hover {
+        opacity: 0.8;
+    }
 `;
 
-export const CampoTexto = ({ setFiltro }) => {
+export const CampoTexto = () => {
+    const { setFiltro } = useContext(GlobalContext);
+
+    const inputRef = useRef(null);
+
+    const handleSetFiltro = () => {
+        setFiltro(inputRef.current.value);
+    };
+
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            handleSetFiltro();
+        }
+    };
+
     return <ContainerEstilizado>
         <CampoTextoEstilizado
-            onChange={(e) => { setFiltro(e.target.value) }}
+            ref={inputRef}
+            onKeyDown={handleKeyDown}
             type="text"
             placeholder="¿Qué estás buscando?" />
-        <IconoLupa src='./iconos/search.png' alt="ícono de lupa" />
+        <IconoLupa
+            src='./iconos/search.png'
+            alt="ícono de lupa"
+            onClick={handleSetFiltro}
+        />
     </ContainerEstilizado>
 }
