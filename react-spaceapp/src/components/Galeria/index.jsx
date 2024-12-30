@@ -18,6 +18,7 @@ flex-direction: column
 const SeccionFluida = styled.section`
 flex-grow: 1;
 `
+
 const ImagenesContainer = styled.section`
     display: flex;
     justify-content: center;
@@ -29,18 +30,18 @@ const ImagenesContainer = styled.section`
 `
 
 export const Galeria = () => {
-    const { setTag, fotosDeGaleria } = useContext(GlobalContext);
+    const { state } = useContext(GlobalContext);
     
     return <>
-        <Tags setTag={setTag} />
+        <Tags />
         <GaleriaContainer>
             <SeccionFluida>
                 <Titulo>Navegue por la galería</Titulo>
                 <ImagenesContainer>
                     {
-                        fotosDeGaleria == ""
+                        state.fotosDeGaleria == ""
                             ? <Loader />
-                            : fotosDeGaleria.map(foto => <Imagen key={foto.id} foto={foto} />)
+                            : state.fotosDeGaleria.map(foto => <Imagen key={foto.id} foto={foto} />)
                     }
                 </ImagenesContainer>
             </SeccionFluida>

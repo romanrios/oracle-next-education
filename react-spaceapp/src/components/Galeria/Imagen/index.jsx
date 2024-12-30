@@ -1,7 +1,7 @@
-import { styled } from "styled-components"
-import { BotonIcono } from "../../BotonIcono"
-import { useContext } from "react"
-import { GlobalContext } from "../../../context/GlobalContext"
+import { styled } from "styled-components";
+import { BotonIcono } from "../../BotonIcono";
+import { useContext } from "react";
+import { GlobalContext } from "../../../context/GlobalContext";
 
 const Figure = styled.figure`
     width: ${props => props.$expandida ? '90%' : '370px'};
@@ -37,32 +37,36 @@ const Figure = styled.figure`
             font-size: 16px;
         }
     }
-`
+`;
 
 const Pie = styled.footer`
     display: flex;
     justify-content: space-between;
     align-items: center;
-`
+`;
 
 export const Imagen = ({ foto, expandida = false }) => {
-    const { setFotoSeleccionada, alAlternarFavorito } = useContext(GlobalContext)
+    const { dispatch } = useContext(GlobalContext);
 
-    const iconoFavorito = foto.favorita ? "./iconos/favorito-activo.png" : "./iconos/favorito.png"
+    const iconoFavorito = foto.favorita ? "./iconos/favorito-activo.png" : "./iconos/favorito.png";
 
-    return <Figure $expandida={expandida} id={`foto-${foto.id}`}>
-        <img src={foto.path} alt={foto.alt} />
-        <figcaption>
-            <h3>{foto.titulo}</h3>
-            <Pie>
-                <h4>{foto.fuente}</h4>
-                <BotonIcono onClick={() => alAlternarFavorito(foto)}>
-                    <img src={iconoFavorito} alt="Icono de favorito" />
-                </BotonIcono>
-                {!expandida && <BotonIcono aria-hidden={expandida} onClick={() => setFotoSeleccionada(foto)}>
-                    <img src="./iconos/expandir.png" alt="Icono de expandir" />
-                </BotonIcono>}
-            </Pie>
-        </figcaption>
-    </Figure>
-}
+    return (
+        <Figure $expandida={expandida} id={`foto-${foto.id}`}>
+            <img src={foto.path} alt={foto.alt} />
+            <figcaption>
+                <h3>{foto.titulo}</h3>
+                <Pie>
+                    <h4>{foto.fuente}</h4>
+                    <BotonIcono onClick={() => dispatch({ type: 'ALTERNAR_FAVORITO', payload: foto })}>
+                        <img src={iconoFavorito} alt="Icono de favorito" />
+                    </BotonIcono>
+                    {!expandida && (
+                        <BotonIcono aria-hidden={expandida} onClick={() => dispatch({ type: 'SET_FOTO_SELECCIONADA', payload: foto })}>
+                            <img src="./iconos/expandir.png" alt="Icono de expandir" />
+                        </BotonIcono>
+                    )}
+                </Pie>
+            </figcaption>
+        </Figure>
+    );
+};

@@ -42,12 +42,12 @@ const IconoLupa = styled.img`
 `;
 
 export const CampoTexto = () => {
-    const { setFiltro } = useContext(GlobalContext);
+    const { dispatch } = useContext(GlobalContext);
 
     const inputRef = useRef(null);
 
     const handleSetFiltro = () => {
-        setFiltro(inputRef.current.value);
+        dispatch({ type: 'SET_FILTRO', payload: inputRef.current.value });
     };
 
     const handleKeyDown = (event) => {

@@ -1,5 +1,7 @@
 import { styled } from 'styled-components';
-import tags from './tags.json'
+import { useContext } from 'react';
+import { GlobalContext } from '../../../context/GlobalContext';
+import tags from './tags.json';
 
 const TagsContainer = styled.section`
     display: flex;
@@ -10,7 +12,7 @@ const TagsContainer = styled.section`
         flex-direction: column;
         align-items: start;
     }
-`
+`;
 
 const TagTitulo = styled.h3`
     color: #D9D9D9;
@@ -31,21 +33,28 @@ const Tag = styled.button`
     &:hover {
       border-color: #C98CF1;
     }
-`
+`;
 
 const Div = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    /* justify-content: end; */
-`
+`;
 
-export const Tags = ({ setTag }) => {
-    return <TagsContainer>
-        <TagTitulo>Busque por tags:</TagTitulo>
-        <Div>
-            {tags.map(tag => <Tag key={tag.id} onClick={() => setTag(tag.tag)} >{tag.titulo}</Tag>)}
-        </Div>
-    </TagsContainer>
-}
+export const Tags = () => {
+    const { dispatch } = useContext(GlobalContext);
+
+    return (
+        <TagsContainer>
+            <TagTitulo>Busque por tags:</TagTitulo>
+            <Div>
+                {tags.map(tag => (
+                    <Tag key={tag.id} onClick={() => dispatch({ type: 'SET_TAG', payload: tag.tag })}>
+                        {tag.titulo}
+                    </Tag>
+                ))}
+            </Div>
+        </TagsContainer>
+    );
+};
 
