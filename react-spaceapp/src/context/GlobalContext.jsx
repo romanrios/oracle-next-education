@@ -7,7 +7,8 @@ const initialState = {
     fotosDeGaleria: fotos,
     fotoSeleccionada: null,
     filtro: '',
-    tag: 0
+    tag: 0,
+    modalAbierto: false
 }
 
 const reducer = (state, action) => {
@@ -15,11 +16,16 @@ const reducer = (state, action) => {
         case "SET_FOTOS_DE_GALERIA":
             return { ...state, fotosDeGaleria: action.payload };
         case "SET_FOTO_SELECCIONADA":
-            return { ...state, fotoSeleccionada: action.payload };
+            return {
+                ...state,
+                fotoSeleccionada: action.payload,
+                modalAbierto: action.payload != null ? true : false
+            };
         case "SET_FILTRO":
             return { ...state, filtro: action.payload };
         case "SET_TAG":
             return { ...state, tag: action.payload };
+
         case 'ALTERNAR_FAVORITO':
             const updatedFotos = state.fotosDeGaleria.map(foto => {
                 if (foto.id === action.payload.id) {
