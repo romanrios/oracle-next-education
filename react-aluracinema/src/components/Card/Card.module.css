@@ -1,0 +1,10 @@
+.container {
+  padding: 0 0 1em 0;
+  margin-top: 5em;
+  width: 282px;
+  background-color: var(--gris);
+}
+
+.capa {
+  width: 100%;
+}
