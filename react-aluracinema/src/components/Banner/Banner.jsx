@@ -1,7 +1,7 @@
 import styles from "./Banner.module.css";
 
 const Banner = ({ img, color }) => {
-  const image = `url('/img/banner-${img}.png')`;
+  const image = `url('./img/banner-${img}.png')`;
   return (
     <>
       <div className={styles.capa} style={{ backgroundImage: image }}>
