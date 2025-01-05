@@ -6,7 +6,7 @@ Proyectos y ejercicios del programa de tecnología y empleabilidad ONE de Oracle
 
 ### Cursos introductorios
 
-| Curso                 | Código                                                                                    |                                                                                     |
+| Curso                 | Código                                                                                    | Web                                                                                 |
 | --------------------- | ----------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | logica-programacion-1 | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/logica-programacion-1) |                                                                                     |
 | logica-programacion-2 | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/logica-programacion-2) | [Visitar](https://romanrios.github.io/oracle-next-education/logica-programacion-2/) |
@@ -17,7 +17,7 @@ Proyectos y ejercicios del programa de tecnología y empleabilidad ONE de Oracle
 
 ### Front-End
 
-| Curso                   | Código                                                                                  |                                                                                   |
+| Curso                   | Código                                                                                  | Web                                                                               |
 | ----------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
 | ia-front                | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/ia-front)            | [Visitar](https://romanrios.github.io/oracle-next-education/ia-front/)            |
 | fokus                   | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/fokus)               | [Visitar](https://romanrios.github.io/oracle-next-education/fokus/)               |
@@ -31,7 +31,7 @@ Proyectos y ejercicios del programa de tecnología y empleabilidad ONE de Oracle
 
 ### React
 
-| Curso                     | Código                                                                                        |                                                                                             |
+| Curso                     | Código                                                                                        | Web                                                                                         |
 | ------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | react-org                 | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/react-org)                 | [Visitar](https://romanrios.github.io/oracle-next-education/react-org/dist)                 |
 | react-ejemplo-form        | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/react-ejemplo-form)        | [Visitar](https://romanrios.github.io/oracle-next-education/react-ejemplo-form/dist)        |
