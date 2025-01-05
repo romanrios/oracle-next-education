@@ -1,15 +1,40 @@
 import styles from "./Player.module.css";
 import Banner from "../../components/Banner/Banner";
 import Titulo from "../../components/Titulo/Titulo";
-import videos from "../../data/db.json";
 import { useParams } from "react-router-dom";
 import NotFound from "../NotFound/NotFound";
+import { useEffect, useState } from "react";
 
 const Player = () => {
   const params = useParams();
-  const video = videos.find((video) => params.id == video.id);
+  const [video, setVideo] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(false);
 
-  if (!video) return <NotFound />;
+  useEffect(() => {
+    fetch(
+      `https://my-json-server.typicode.com/romanrios/oracle-next-education/react-aluracinema/${params.id}`
+    )
+      .then((response) => {
+        setError(false);
+        if (!response.ok) {
+          throw new Error("Video not found");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setVideo(data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Error fetching video:", error);
+        setError(true);
+        setLoading(false);
+      });
+  }, [params.id]);
+
+  if (loading) return <Titulo>Cargando video...</Titulo>;
+  if (error || !video) return <NotFound />;
 
   return (
     <div className={styles.Player}>
