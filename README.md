@@ -17,15 +17,16 @@ Proyectos y ejercicios del programa de tecnología y empleabilidad ONE de Oracle
 
 ### Front-End
 
-| Curso                   | Código                                                                                  | Web                                                                               |
-| ----------------------- | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------- |
-| ia-front                | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/ia-front)            | [Visitar](https://romanrios.github.io/oracle-next-education/ia-front/)            |
-| fokus                   | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/fokus)               | [Visitar](https://romanrios.github.io/oracle-next-education/fokus/)               |
-| aluraplay               | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/aluraplay)           | [Visitar](https://romanrios.github.io/oracle-next-education/aluraplay/)           |
-| challenge-portfolio     | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/challenge-portfolio) | [Visitar](https://romanrios.github.io/oracle-next-education/challenge-portfolio)  |
-| aluramidi               | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/aluramidi)           | [Visitar](https://romanrios.github.io/oracle-next-education/aluramidi/)           |
-| pong (videojuego p5.js) | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/pong)                | [Visitar](https://romanrios.github.io/oracle-next-education/pong/)                |
-| challenge-alurageek     | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/challenge-alurageek) | [Visitar](https://romanrios.github.io/oracle-next-education/challenge-alurageek/) |
+| Curso                   | Código                                                                                  | Web                                                                                 |
+| ----------------------- | --------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
+| ia-front                | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/ia-front)            | [Visitar](https://romanrios.github.io/oracle-next-education/ia-front/)              |
+| fokus                   | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/fokus)               | [Visitar](https://romanrios.github.io/oracle-next-education/fokus/)                 |
+| aluraplay               | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/aluraplay)           | [Visitar](https://romanrios.github.io/oracle-next-education/aluraplay/)             |
+| challenge-portfolio     | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/challenge-portfolio) | [Visitar](https://romanrios.github.io/oracle-next-education/challenge-portfolio)    |
+| aluramidi               | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/aluramidi)           | [Visitar](https://romanrios.github.io/oracle-next-education/aluramidi/)             |
+| pong (videojuego p5.js) | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/pong)                | [Visitar](https://romanrios.github.io/oracle-next-education/pong/)                  |
+| challenge-alurageek     | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/challenge-alurageek) | [Visitar](https://romanrios.github.io/oracle-next-education/challenge-alurageek/)   |
+| react-aluracinema       | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/react-aluracinema)   | [Visitar](https://romanrios.github.io/oracle-next-education/react-aluracinema/dist) |
 
 ---
 
