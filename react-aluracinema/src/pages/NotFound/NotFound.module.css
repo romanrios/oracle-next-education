@@ -1,0 +1,16 @@
+.NotFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+
+  h2 {
+    font-size: 10rem;
+    font-weight: lighter;
+    color: rgb(128, 128, 128);
+  }
+  p {
+    font-size: 1.5rem;
+  }
+}

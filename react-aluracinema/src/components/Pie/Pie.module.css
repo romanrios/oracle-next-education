@@ -1,16 +1,21 @@
 .pie {
-    background-color: var(--negro);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+  background-color: var(--negro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  margin-top: 40px;
 }
 
 .pie h2 {
-    color: var(--blanco);
-    font-size: 20px;
+  font-weight: 600;
+  color: var(--blanco);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
 }
 
 h2 img {
-    width: 50px;
+  width: 170px;
 }

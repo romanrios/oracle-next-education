@@ -1,10 +1,30 @@
-.container {
-  padding: 0 0 1em 0;
-  margin-top: 5em;
-  width: 282px;
+.Card {
+  width: 342px;
   background-color: var(--gris);
 }
 
 .capa {
   width: 100%;
+}
+
+.Card_info {
+  display: flex;
+  flex-direction: column;
+  height: 101px;
+  padding: 6.8px 19px;
+}
+
+.Card h2 {
+  flex: 1;
+  font-size: 1.125rem;
+}
+
+.icono {
+  width: 24px;
+  align-self: flex-end;
+  cursor: pointer;
+  opacity: 0.75;
+}
+.icono:hover {
+  opacity: 1;
 }

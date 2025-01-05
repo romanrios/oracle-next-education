@@ -1,0 +1,17 @@
+.Player {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Player iframe {
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  aspect-ratio: 16 / 9;
+  display: block;
+  margin: 0 auto;
+}
