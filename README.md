@@ -39,5 +39,4 @@ Proyectos y ejercicios del programa de tecnología y empleabilidad ONE de Oracle
 | react-router (doguito)    | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/react-router)              | [Visitar](https://romanrios.github.io/oracle-next-education/react-router/dist)              |
 | react-spaceapp            | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/react-spaceapp)            | [Visitar](https://romanrios.github.io/oracle-next-education/react-spaceapp/dist)            |
 | react-function-components | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/react-function-components) | [Visitar](https://romanrios.github.io/oracle-next-education/react-function-components/dist) |
-
----
+| react-aluracinema         | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/react-aluracinema)         | [Visitar](https://romanrios.github.io/oracle-next-education/react-aluracinema/dist)         |

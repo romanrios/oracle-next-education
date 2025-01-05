@@ -1,11 +1,10 @@
 import styles from "./Pie.module.css";
-import logo from "./romanrios.png";
 
 function Pie() {
   return (
     <footer className={styles.pie}>
       <h2>
-        Desarrollado por <img src={logo} alt="Román Ríos" />
+        Desarrollado por <img src={"./img/romanrios.png"} alt="Román Ríos" />
       </h2>
     </footer>
   );
