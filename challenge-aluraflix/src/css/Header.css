@@ -1,0 +1,28 @@
+.Header {
+  height: 125px;
+  background: var(--darkblue);
+  display: flex;
+  padding: 0 51px;
+  align-items: center;
+  img {
+    max-width: 168.45px;
+    height: auto;
+    object-fit: contain;
+  }
+  .Header_buttons_container {
+    margin-left: auto;
+    display: flex;
+    gap: 25px;
+  }
+  button {
+    font-family: "Source Sans 3", serif;
+    color: white;
+    font-weight: 900;
+    font-size: 20px;
+    width: 180px;
+    height: 54px;
+    border: solid 2px white;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,12 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: white;
+  font-family: Roboto, sans-serif;
+}
+
+main {
+  flex: 1;
+  background-color: var(--grey);
+}

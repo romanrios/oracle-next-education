@@ -1,0 +1,10 @@
+.Footer {
+  height: 125px;
+  background: var(--darkblue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 168.45px;
+  }
+}
