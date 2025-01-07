@@ -7,6 +7,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative; /* Necesario para los pseudo-elementos */
+  z-index: 1; /* Para asegurarte de que el contenido esté sobre el gradiente */
+  flex-wrap: wrap; /* temp? */
+  padding: 0 15px;
+}
+
+.Banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #19191900 50%, #191919 100%);
+  z-index: -1; /* Coloca el gradiente detrás del contenido de .Banner */
+  pointer-events: none; /* El gradiente no bloqueará la interacción */
 }
 
 .Banner_img_container {

@@ -1,20 +1,26 @@
 .Header {
-  height: 125px;
+  /* height: 125px; */
   background: var(--darkblue);
   display: flex;
-  padding: 0 51px;
+  padding: 35px 51px;
   align-items: center;
+  flex-wrap: wrap; /* temp! */
+  border-bottom: 4px solid var(--blue);
+  box-shadow: 0 5px 29px rgba(34, 113, 209, 0.7);
+  z-index: 2;
+
   img {
     max-width: 168.45px;
     height: auto;
     object-fit: contain;
   }
-  .Header_buttons_container {
+  ul {
     margin-left: auto;
     display: flex;
     gap: 25px;
+    flex-wrap: wrap; /* temp! */
   }
-  button {
+  li {
     font-family: "Source Sans 3", serif;
     color: white;
     font-weight: 900;
@@ -24,5 +30,8 @@
     border: solid 2px white;
     border-radius: 15px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

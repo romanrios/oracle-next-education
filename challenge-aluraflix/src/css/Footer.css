@@ -2,8 +2,13 @@
   height: 125px;
   background: var(--darkblue);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
+  color: --var(grey);
+  border-top: 4px solid var(--blue);
+  box-shadow: 0 -5px 29px rgba(34, 113, 209, 0.7);
   img {
     width: 168.45px;
   }

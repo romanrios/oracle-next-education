@@ -1,0 +1,20 @@
+.CardsGroup {
+  padding-bottom: 93px;
+
+  .CardsGroup_title {
+    font-weight: 800;
+    font-size: 30px;
+    max-width: 432px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 40px;
+  }
+
+  .card-item {
+    padding: 0 5px;
+  }
+}
