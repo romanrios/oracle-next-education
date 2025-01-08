@@ -1,14 +1,65 @@
 [
   {
     "titulo": "Como aplicar Dark Mode en tu proyecto",
-    "codigo": "MxlxFhzGRV8"
+    "codigo": "MxlxFhzGRV8",
+    "categoria": "frontend",
+    "cover": "https://img.youtube.com/vi/MxlxFhzGRV8/hqdefault.jpg",
+    "id": "1"
   },
   {
     "titulo": "¿Por qué utilizar React?",
-    "codigo": "MnBNPA45NW8"
+    "codigo": "MnBNPA45NW8",
+    "categoria": "frontend",
+    "cover": "https://img.youtube.com/vi/MnBNPA45NW8/hqdefault.jpg",
+    "id": "2"
   },
   {
     "titulo": "Ventajas de trabajar con TypeScript",
-    "codigo": "bFrhU0hbo00"
+    "codigo": "bFrhU0hbo00",
+    "categoria": "frontend",
+    "cover": "https://img.youtube.com/vi/bFrhU0hbo00/hqdefault.jpg",
+    "id": "3"
+  },
+  {
+    "titulo": "Como aplicar Dark Mode en tu proyecto",
+    "codigo": "MxlxFhzGRV8",
+    "categoria": "backend",
+    "cover": "https://img.youtube.com/vi/MxlxFhzGRV8/hqdefault.jpg",
+    "id": "4"
+  },
+  {
+    "titulo": "¿Por qué utilizar React?",
+    "codigo": "MnBNPA45NW8",
+    "categoria": "backend",
+    "cover": "https://img.youtube.com/vi/MnBNPA45NW8/hqdefault.jpg",
+    "id": "5"
+  },
+  {
+    "titulo": "Ventajas de trabajar con TypeScript",
+    "codigo": "bFrhU0hbo00",
+    "categoria": "backend",
+    "cover": "https://img.youtube.com/vi/bFrhU0hbo00/hqdefault.jpg",
+    "id": "6"
+  },
+  {
+    "titulo": "Como aplicar Dark Mode en tu proyecto",
+    "codigo": "MxlxFhzGRV8",
+    "categoria": "innovacion",
+    "cover": "https://img.youtube.com/vi/MxlxFhzGRV8/hqdefault.jpg",
+    "id": "7"
+  },
+  {
+    "titulo": "¿Por qué utilizar React?",
+    "codigo": "MnBNPA45NW8",
+    "categoria": "innovacion",
+    "cover": "https://img.youtube.com/vi/MnBNPA45NW8/hqdefault.jpg",
+    "id": "8"
+  },
+  {
+    "titulo": "Ventajas de trabajar con TypeScript",
+    "codigo": "bFrhU0hbo00",
+    "categoria": "innovacion",
+    "cover": "https://img.youtube.com/vi/bFrhU0hbo00/hqdefault.jpg",
+    "id": "9"
   }
 ]

@@ -2,8 +2,12 @@ import "../css/CardsGroup.css";
 import Card from "./Card";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import React, { useContext } from "react";
+import DataContext from "../context/context";
 
 const CardsGroup = (props) => {
+  const { data } = useContext(DataContext);
+
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -22,15 +26,25 @@ const CardsGroup = (props) => {
       items: 1,
     },
   };
+
+  const filteredData = data.filter(
+    (item) => item.categoria === props.title.toLowerCase()
+  );
+
   return (
     <section className="CardsGroup">
       <h2 className="CardsGroup_title" style={{ backgroundColor: props.color }}>
         {props.title}
       </h2>
       <Carousel responsive={responsive} infinite={true} itemClass="card-item">
-        <Card color={props.color} />
-        <Card color={props.color} />
-        <Card color={props.color} />
+        {filteredData.map((item) => (
+          <Card
+            key={item.id}
+            color={props.color}
+            item={item}
+            cover={item.cover}
+          />
+        ))}
       </Carousel>
     </section>
   );

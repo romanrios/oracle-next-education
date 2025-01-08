@@ -4,7 +4,7 @@ import { RiDeleteBin2Line, RiEditLine } from "react-icons/ri";
 const Card = (props) => {
   return (
     <div className="Card" style={{ borderColor: props.color }}>
-      <img src="./assets/video_cover.png" alt="Portada de video" />
+      <img src={props.cover} alt="Portada de video" />
       <div className="Card_info">
         <button>
           <RiDeleteBin2Line />

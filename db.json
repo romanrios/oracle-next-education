@@ -1,34 +1,65 @@
-{
-  "react-aluracinema": [
-    {
-      "id": 1,
-      "titulo": "CSS - Display block, inline, inline-block",
-      "capa": "https://img.youtube.com/vi/AG2QssLpQzI/hqdefault.jpg",
-      "link": "https://www.youtube.com/embed/AG2QssLpQzI?si=6Yn355wcxAqU7_Ld"
-    },
-    {
-      "id": 2,
-      "titulo": "Productividad en el trabajo remoto",
-      "capa": "https://img.youtube.com/vi/AULPtYo25Lw/hqdefault.jpg",
-      "link": "https://www.youtube.com/embed/AULPtYo25Lw?si=UGdKX1NSrEcQ0jfn"
-    },
-    {
-      "id": 3,
-      "titulo": "¿Cuáles son las principales áreas de la programación?",
-      "capa": "https://img.youtube.com/vi/03cxUlwLVt4/hqdefault.jpg",
-      "link": "https://www.youtube.com/embed/03cxUlwLVt4?si=zVCUQNO-eS2RZQTO"
-    },
-    {
-      "id": 4,
-      "titulo": "Detección de intruso con IA",
-      "capa": "https://img.youtube.com/vi/5T_Q_NtNLZE/hqdefault.jpg",
-      "link": "https://www.youtube.com/embed/5T_Q_NtNLZE?si=M7D0JeagaKqsoaFs"
-    },
-    {
-      "id": 5,
-      "titulo": "Ventajas de utilizar TypeScript",
-      "capa": "https://img.youtube.com/vi/bFrhU0hbo00/hqdefault.jpg",
-      "link": "https://www.youtube.com/embed/bFrhU0hbo00?si=yVe7JOnzV4W8wPYM"
-    }
-  ]
-}
+[
+  {
+    "titulo": "Como aplicar Dark Mode en tu proyecto",
+    "codigo": "MxlxFhzGRV8",
+    "categoria": "front end",
+    "id": "1",
+    "cover": "https://img.youtube.com/vi/MxlxFhzGRV8/hqdefault.jpg"
+  },
+  {
+    "titulo": "¿Por qué utilizar React?",
+    "codigo": "MnBNPA45NW8",
+    "categoria": "front end",
+    "id": "2",
+    "cover": "https://img.youtube.com/vi/MnBNPA45NW8/hqdefault.jpg"
+  },
+  {
+    "titulo": "Ventajas de trabajar con TypeScript",
+    "codigo": "bFrhU0hbo00",
+    "categoria": "front end",
+    "id": "3",
+    "cover": "https://img.youtube.com/vi/bFrhU0hbo00/hqdefault.jpg"
+  },
+  {
+    "titulo": "Spring Framework. ¿Qué es?",
+    "codigo": "t-iqt1b2qqk",
+    "categoria": "back end",
+    "id": "4",
+    "cover": "https://img.youtube.com/vi/t-iqt1b2qqk/hqdefault.jpg"
+  },
+  {
+    "titulo": "¿Por qué utilizar Java actualmente?",
+    "codigo": "3kNuK-XAHEY",
+    "categoria": "back end",
+    "id": "5",
+    "cover": "https://img.youtube.com/vi/3kNuK-XAHEY/hqdefault.jpg"
+  },
+  {
+    "titulo": "Simplificando el Back End",
+    "codigo": "XuSXJ9DUcvY",
+    "categoria": "back end",
+    "id": "6",
+    "cover": "https://img.youtube.com/vi/XuSXJ9DUcvY/hqdefault.jpg"
+  },
+  {
+    "titulo": "Cómo evitar robo de vehículo con Inteligencia Artificial",
+    "codigo": "5T_Q_NtNLZE",
+    "categoria": "innovación y gestión",
+    "id": "7",
+    "cover": "https://img.youtube.com/vi/5T_Q_NtNLZE/hqdefault.jpg"
+  },
+  {
+    "titulo": "¿Qué son las metodologias ágiles?",
+    "codigo": "6N3OkLCfK-0",
+    "categoria": "innovación y gestión",
+    "id": "8",
+    "cover": "https://img.youtube.com/vi/6N3OkLCfK-0/hqdefault.jpg"
+  },
+  {
+    "titulo": "Qué Significa Pensar Como Programador",
+    "codigo": "ov7vA5HFe6w",
+    "categoria": "innovación y gestión",
+    "id": "9",
+    "cover": "https://img.youtube.com/vi/ov7vA5HFe6w/hqdefault.jpg"
+  }
+]
