@@ -4,7 +4,7 @@ const MOCKAPI_URL = "https://6759e26f099e3090dbe33820.mockapi.io/romanflix";
 
 const apiClient = axios.create({
   baseURL: MOCKAPI_URL,
-  timeout: 1000,
+  timeout: 10000,
   headers: { "Content-Type": "application/json" },
 });
 

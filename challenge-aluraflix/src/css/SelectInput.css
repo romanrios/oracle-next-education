@@ -1,0 +1,25 @@
+.SelectInput {
+  font-family: "Source Sans 3", serif;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+
+  select {
+    border: 3px solid #262626;
+    border-radius: 10px;
+    padding: 16px 9px;
+    font-weight: 600;
+    color: var(--white);
+  }
+
+  select.placeholder {
+    color: gray !important; /* Color especial para el placeholder */
+  }
+
+  option {
+    color: var(--grey); /* Color de las demás opciones */
+  }
+}

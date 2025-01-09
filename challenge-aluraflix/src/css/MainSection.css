@@ -1,17 +1,17 @@
-.CardsSection {
+.MainSection {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
-.CardsSection_message {
+.MainSection_message {
   text-align: center;
   margin: 200px auto;
 }
 
 /* Loader */
 
-.CardsSection_loader {
+.MainSection_loader {
   margin: 200px auto;
   width: 16px;
   height: 16px;

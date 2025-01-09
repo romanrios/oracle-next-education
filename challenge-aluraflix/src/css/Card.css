@@ -30,6 +30,8 @@
       align-items: center;
       gap: 8px;
       cursor: pointer;
+      opacity: 0.75;
+      transition: opacity 0.2s;
       svg {
         font-size: 28px;
       }
@@ -39,8 +41,7 @@
       }
     }
     button:hover {
-      color: hsl(213, 100%, 68%);
-      filter: drop-shadow(0 0 5px rgba(34, 113, 209, 0.7));
+      opacity: 1;
     }
   }
 }

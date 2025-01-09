@@ -1,5 +1,4 @@
 .Header {
-  /* height: 125px; */
   background: var(--darkblue);
   display: flex;
   padding: 35px 51px;
@@ -13,25 +12,16 @@
     max-width: 168.45px;
     height: auto;
     object-fit: contain;
+    transition: filter 0.5s;
+    cursor: pointer;
+  }
+  img:hover {
+    filter: drop-shadow(0 0 12px var(--blue));
   }
   ul {
     margin-left: auto;
     display: flex;
     gap: 25px;
     flex-wrap: wrap; /* temp! */
-  }
-  li {
-    font-family: "Source Sans 3", serif;
-    color: white;
-    font-weight: 900;
-    font-size: 20px;
-    width: 180px;
-    height: 54px;
-    border: solid 2px white;
-    border-radius: 15px;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 }

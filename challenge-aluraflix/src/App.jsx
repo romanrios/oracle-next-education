@@ -1,16 +1,19 @@
 import "./css/App.css";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
+import MainSection from "./components/MainSection";
+import NewVideo from "./components/NewVideo";
 import Footer from "./components/Footer";
-import Banner from "./components/Banner";
-import CardsSection from "./components/CardsSection";
 
 function App() {
   return (
     <>
       <Header />
       <main>
-        <Banner />
-        <CardsSection />
+        <Routes>
+          <Route path="/" element={<MainSection />} />
+          <Route path="/newvideo" element={<NewVideo />} />
+        </Routes>
       </main>
       <Footer />
     </>

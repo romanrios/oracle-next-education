@@ -1,0 +1,35 @@
+.NewVideo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding-top: 71px;
+  padding-bottom: 71px;
+  max-width: 700px;
+  margin: 0 auto;
+  h2 {
+    font-size: 60px;
+    font-weight: 900;
+    color: var(--almostwhite);
+  }
+  & > p {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  h3 {
+    font-family: "Source Sans 3", serif;
+    font-size: 36px;
+    font-weight: 600;
+    border-top: solid 3px #262626;
+    border-bottom: solid 3px #262626;
+    text-align: left;
+    width: 100%;
+    padding: 28px 0;
+  }
+}
+
+.NewVideo_buttonscontainer {
+  display: flex;
+  gap: 30px;
+}

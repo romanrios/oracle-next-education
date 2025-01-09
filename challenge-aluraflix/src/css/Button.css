@@ -1,0 +1,28 @@
+.Button {
+  font-family: "Source Sans 3", serif;
+  color: white;
+  font-weight: 900;
+  font-size: 20px;
+  width: 180px;
+  height: 54px;
+  border: solid 2px white;
+  border-radius: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+
+.Button.selected {
+  color: var(--blue);
+  border-color: var(--blue);
+  box-shadow: 0 0 10px 2px var(--blue) inset;
+  opacity: 1;
+  cursor: default;
+}
+
+.Button:hover {
+  opacity: 1;
+}

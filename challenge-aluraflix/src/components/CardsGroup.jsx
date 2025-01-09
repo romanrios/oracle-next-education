@@ -4,6 +4,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import React, { useContext } from "react";
 import DataContext from "../context/context";
+import { motion } from "motion/react";
 
 const CardsGroup = (props) => {
   const { data } = useContext(DataContext);
@@ -32,7 +33,13 @@ const CardsGroup = (props) => {
   );
 
   return (
-    <section className="CardsGroup">
+    <motion.section
+      className="CardsGroup"
+      initial={{ opacity: 0, x: 70 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      viewport={{ amount: 0.6, once: true }}
+    >
       <h2 className="CardsGroup_title" style={{ backgroundColor: props.color }}>
         {props.title}
       </h2>
@@ -46,7 +53,7 @@ const CardsGroup = (props) => {
           />
         ))}
       </Carousel>
-    </section>
+    </motion.section>
   );
 };
 
