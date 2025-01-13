@@ -13,16 +13,16 @@
   align-items: center;
   opacity: 0.8;
   transition: opacity 0.2s;
-}
 
-.Button.selected {
-  color: var(--blue);
-  border-color: var(--blue);
-  box-shadow: 0 0 10px 2px var(--blue) inset;
-  opacity: 1;
-  cursor: default;
-}
+  &.selected {
+    color: var(--blue);
+    border-color: var(--blue);
+    box-shadow: 0 0 10px 2px var(--blue) inset;
+    opacity: 1;
+    cursor: default;
+  }
 
-.Button:hover {
-  opacity: 1;
+  &:hover {
+    opacity: 1;
+  }
 }

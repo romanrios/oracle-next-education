@@ -8,6 +8,14 @@
   padding-bottom: 71px;
   max-width: 700px;
   margin: 0 auto;
+  .NewVideo_form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
   h2 {
     font-size: 60px;
     font-weight: 900;
@@ -27,9 +35,69 @@
     width: 100%;
     padding: 28px 0;
   }
-}
+  .NewVideo_buttonscontainer {
+    display: flex;
+    gap: 30px;
+  }
+  .error {
+    color: rgb(255, 77, 101);
+    font-size: medium;
+  }
 
-.NewVideo_buttonscontainer {
-  display: flex;
-  gap: 30px;
+  /* FORM */
+
+  .TextInput {
+    font-family: "Source Sans 3", serif;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+
+    input,
+    textarea {
+      border: 3px solid #262626;
+      border-radius: 10px;
+      padding: 16px 9px;
+      font-weight: 600;
+      color: inherit;
+      line-height: 28px;
+    }
+
+    .sub-text {
+      font-size: medium;
+      color: gray;
+    }
+
+    .no-resize {
+      resize: none;
+    }
+  }
+
+  .SelectInput {
+    font-family: "Source Sans 3", serif;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+
+    select {
+      border: 3px solid #262626;
+      border-radius: 10px;
+      padding: 16px 9px;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    select.placeholder {
+      color: gray !important; /* Color especial para el placeholder */
+    }
+
+    option {
+      color: var(--grey); /* Color de las demás opciones */
+    }
+  }
 }

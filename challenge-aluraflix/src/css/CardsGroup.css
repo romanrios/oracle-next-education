@@ -18,3 +18,47 @@
     padding: 0 5px;
   }
 }
+
+/* src/css/sweetalert2.css */
+
+.swal-popup {
+  padding: 0;
+  max-height: 80vh;
+  max-width: 80vw;
+  width: 100%;
+  height: auto;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .swal2-html-container {
+    padding: 0;
+  }
+
+  .video-container {
+    padding-bottom: 56.25%;
+    position: relative;
+  }
+
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .swal2-close {
+    position: absolute;
+    right: -40px;
+    top: -40px;
+  }
+}
+
+@media (min-width: 900px) {
+  .swal-popup {
+    max-width: 60vw;
+  }
+}

@@ -1,65 +1,82 @@
 [
   {
     "titulo": "Como aplicar Dark Mode en tu proyecto",
-    "codigo": "MxlxFhzGRV8",
+    "video": "https://www.youtube.com/embed/MxlxFhzGRV8",
     "categoria": "front end",
-    "id": "1",
-    "cover": "https://img.youtube.com/vi/MxlxFhzGRV8/hqdefault.jpg"
+    "imagen": "https://img.youtube.com/vi/MxlxFhzGRV8/hqdefault.jpg",
+    "descripcion": "Aprende a implementar un modo oscuro en tus proyectos para mejorar la experiencia del usuario.",
+    "id": "1"
   },
   {
     "titulo": "¿Por qué utilizar React?",
-    "codigo": "MnBNPA45NW8",
+    "video": "https://www.youtube.com/embed/MnBNPA45NW8",
     "categoria": "front end",
-    "id": "2",
-    "cover": "https://img.youtube.com/vi/MnBNPA45NW8/hqdefault.jpg"
+    "imagen": "https://img.youtube.com/vi/MnBNPA45NW8/hqdefault.jpg",
+    "descripcion": "Descubre las razones por las que React es una de las bibliotecas más populares para el desarrollo frontend.",
+    "id": "2"
   },
   {
     "titulo": "Ventajas de trabajar con TypeScript",
-    "codigo": "bFrhU0hbo00",
+    "video": "https://www.youtube.com/embed/bFrhU0hbo00",
     "categoria": "front end",
-    "id": "3",
-    "cover": "https://img.youtube.com/vi/bFrhU0hbo00/hqdefault.jpg"
+    "imagen": "https://img.youtube.com/vi/bFrhU0hbo00/hqdefault.jpg",
+    "descripcion": "Explora cómo TypeScript puede ayudarte a crear aplicaciones más robustas y con menos errores.",
+    "id": "3"
   },
   {
     "titulo": "Spring Framework. ¿Qué es?",
-    "codigo": "t-iqt1b2qqk",
+    "video": "https://www.youtube.com/embed/t-iqt1b2qqk",
     "categoria": "back end",
-    "id": "4",
-    "cover": "https://img.youtube.com/vi/t-iqt1b2qqk/hqdefault.jpg"
+    "imagen": "https://img.youtube.com/vi/t-iqt1b2qqk/hqdefault.jpg",
+    "descripcion": "¿Busca un framework  para utilizar en sus proyectos? ¿Conoce Spring Framework? Spring es el framework más usado de Java. Nos ofrece herramientas que nos permiten crear proyectos más avanzados, con mejores prácticas y en menor tiempo. También posee una gran comunidad, lo que nos brinda muchísima documentación y ayuda.",
+    "id": "4"
   },
   {
-    "titulo": "¿Por qué utilizar Java actualmente?",
-    "codigo": "3kNuK-XAHEY",
+    "titulo": "Explorando el poder del Back-End en el Desarrollo Web",
+    "video": "https://www.youtube.com/embed/Z024LSCMqFk",
     "categoria": "back end",
-    "id": "5",
-    "cover": "https://img.youtube.com/vi/3kNuK-XAHEY/hqdefault.jpg"
+    "imagen": "https://img.youtube.com/vi/Z024LSCMqFk/hqdefault.jpg",
+    "descripcion": "¿Quieres saber más? Ve nuestros cursos: https://www.aluracursos.com/cursos-on... Encuentra variados artículos sobre tecnologia en nuestro blog: https://www.aluracursos.com/blog/",
+    "id": "5"
   },
   {
     "titulo": "Simplificando el Back End",
-    "codigo": "XuSXJ9DUcvY",
+    "video": "https://www.youtube.com/embed/XuSXJ9DUcvY",
     "categoria": "back end",
-    "id": "6",
-    "cover": "https://img.youtube.com/vi/XuSXJ9DUcvY/hqdefault.jpg"
+    "imagen": "https://img.youtube.com/vi/XuSXJ9DUcvY/hqdefault.jpg",
+    "descripcion": "¿Quieres conocer y entender mejor qué es el Back End? En este video Bismarck Berrios nos explica qué es el back end de una manera sencilla.",
+    "id": "6"
   },
   {
     "titulo": "Cómo evitar robo de vehículo con Inteligencia Artificial",
-    "codigo": "5T_Q_NtNLZE",
+    "video": "https://www.youtube.com/embed/5T_Q_NtNLZE",
     "categoria": "innovación y gestión",
-    "id": "7",
-    "cover": "https://img.youtube.com/vi/5T_Q_NtNLZE/hqdefault.jpg"
-  },
-  {
-    "titulo": "¿Qué son las metodologias ágiles?",
-    "codigo": "6N3OkLCfK-0",
-    "categoria": "innovación y gestión",
-    "id": "8",
-    "cover": "https://img.youtube.com/vi/6N3OkLCfK-0/hqdefault.jpg"
+    "imagen": "https://img.youtube.com/vi/5T_Q_NtNLZE/hqdefault.jpg",
+    "descripcion": "En este video te voy a mostrar cómo puedes utilizar la Inteligencia Artificial (IA) para evitar el robo de tu vehículo. Construiremos un script en Python capaz de reconocer si existe un intruso al volante aplicando una técnica de IA llamada Face Recognition para después enviar el rastreamiento a la policia. Como proyecto vamos a construir un Detector de Intrusos, reconociendo el rostro de la persona que está al volante, si un intruso es detectado entonces capturamos una imagen del intruso, geolocalización, fecha y hora del robo y la placa del auto y se la enviamos al WhatsApp de la policia para que puedan rastrear el vehículo, en paralelo, activamos una alarma potente para intentar que el intruso desista del robo.",
+    "id": "7"
   },
   {
     "titulo": "Qué Significa Pensar Como Programador",
-    "codigo": "ov7vA5HFe6w",
+    "video": "https://www.youtube.com/embed/ov7vA5HFe6w",
     "categoria": "innovación y gestión",
-    "id": "9",
-    "cover": "https://img.youtube.com/vi/ov7vA5HFe6w/hqdefault.jpg"
+    "imagen": "https://img.youtube.com/vi/ov7vA5HFe6w/hqdefault.jpg",
+    "descripcion": "Cuáles son las principales características de un programador? ¿Qué habilidades y competencias debe tener alguien que quiere seguir esa carrera? En este video Christian Velasco nos habla de las principales características de un Programador.",
+    "id": "8"
+  },
+  {
+    "titulo": "¿Qué son las metodologias ágiles?",
+    "video": "https://www.youtube.com/embed/6N3OkLCfK-0",
+    "categoria": "innovación y gestión",
+    "imagen": "https://img.youtube.com/vi/6N3OkLCfK-0/hqdefault.jpg",
+    "descripcion": "En este video nuestra invitada, Andyara, nos explicará que són las muy conocidas hoy en día metodologias ágiles y nos comentará un poco sobre como aplicarlas y cuáles son los beneficios de utilizarlas en su equipo o empresa.",
+    "id": "9"
+  },
+  {
+    "titulo": "Banco de Datos MySQL | Contenidos ONE",
+    "video": "https://www.youtube.com/watch?v=8J0AoPZMVxA",
+    "categoria": "back end",
+    "imagen": "https://img.youtube.com/vi/8J0AoPZMVxA/hqdefault.jpg",
+    "descripcion": "¿Vamos a hablar de Base de datos con MySQL?\n\nEn esta serie de videos en alianza con Oracle, explicaremos y exploraremos las herramientas de Oracle. En este episodio recibimos a Narciso Junior, quien se desempeña como LATAM Cloud Evangelist en la empresa.",
+    "id": "10"
   }
 ]

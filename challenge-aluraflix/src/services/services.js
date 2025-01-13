@@ -16,3 +16,21 @@ export const fetchData = async (endpoint) => {
     throw error;
   }
 };
+
+export const addData = async (endpoint, data) => {
+  try {
+    const response = await apiClient.post(endpoint, data);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
+
+export const deleteData = async (id) => {
+  try {
+    const response = await apiClient.delete(`/${id}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};

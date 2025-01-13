@@ -12,10 +12,17 @@
 
     cursor: pointer;
 
-    user-select: none; /* Evita la selección de la imagen */
-    -webkit-user-drag: none; /* Evita el arrastre de la imagen en navegadores basados en WebKit */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
+    /* Evita la selección de la imagen */
+    user-select: none;
+
+    /* Evita el arrastre de la imagen en navegadores basados en WebKit */
+    -webkit-user-drag: none;
+
+    /* Firefox */
+    -moz-user-select: none;
+
+    /* Internet Explorer/Edge */
+    -ms-user-select: none;
   }
   .Card_info {
     display: flex;

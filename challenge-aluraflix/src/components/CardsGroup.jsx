@@ -5,9 +5,19 @@ import "react-multi-carousel/lib/styles.css";
 import React, { useContext } from "react";
 import DataContext from "../context/context";
 import { motion } from "motion/react";
+import Swal from "sweetalert2";
+import { useState } from "react";
+import { deleteData } from "../services/services";
+import {
+  showSuccessAlert,
+  showErrorAlert,
+  showConfirmationAlert,
+  showEdit,
+} from "../utils/alerts";
 
 const CardsGroup = (props) => {
-  const { data } = useContext(DataContext);
+  const { data, removeVideo } = useContext(DataContext);
+  const [startPos, setStartPos] = useState({ x: 0, y: 0 });
 
   const responsive = {
     superLargeDesktop: {
@@ -28,8 +38,52 @@ const CardsGroup = (props) => {
     },
   };
 
+  const handleMouseDown = (e) => {
+    setStartPos({ x: e.clientX, y: e.clientY });
+  };
+
+  const handlePlay = (e, videoUrl) => {
+    const endPos = { x: e.clientX, y: e.clientY };
+    const distance = Math.sqrt(
+      (endPos.x - startPos.x) ** 2 + (endPos.y - startPos.y) ** 2
+    ); // Solo dispara el click si el arrastre es pequeño (umbral de 5 píxeles)
+    if (distance < 5) {
+      const embedUrl = videoUrl.replace("watch?v=", "embed/");
+      Swal.fire({
+        html: `<div class="video-container"><iframe src="${embedUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`,
+        showCloseButton: true,
+        customClass: "swal-popup",
+        showConfirmButton: false,
+      });
+    }
+  };
+
+  const handleDelete = async (videoId) => {
+    try {
+      const isConfirmed = await showConfirmationAlert(
+        "¿Estás seguro de que deseas eliminar este video? Esta acción no se puede deshacer."
+      );
+      if (!isConfirmed) {
+        return; // Si el usuario cancela, salir
+      }
+      if (videoId < 17) {
+        showErrorAlert(
+          "El administrador no permite la eliminación de este video."
+        );
+        return; // Salir de la función
+      }
+      await deleteData(videoId); // Elimina el video desde la API
+      removeVideo(videoId); // Elimina el video del estado global
+      showSuccessAlert("El video ha sido eliminado correctamente.");
+    } catch (error) {
+      showErrorAlert(
+        "Hubo un problema al eliminar el video. Inténtalo nuevamente."
+      );
+    }
+  };
+
   const filteredData = data.filter(
-    (item) => item.categoria === props.title.toLowerCase()
+    (item) => item.categoria.toLowerCase() === props.title.toLowerCase()
   );
 
   return (
@@ -46,10 +100,14 @@ const CardsGroup = (props) => {
       <Carousel responsive={responsive} infinite={true} itemClass="card-item">
         {filteredData.map((item) => (
           <Card
-            key={item.id}
             color={props.color}
-            item={item}
-            cover={item.cover}
+            key={item.id}
+            id={item.id}
+            imagen={item.imagen}
+            video={item.video}
+            handlePlay={handlePlay}
+            handleMouseDown={handleMouseDown}
+            handleDelete={handleDelete}
           />
         ))}
       </Carousel>

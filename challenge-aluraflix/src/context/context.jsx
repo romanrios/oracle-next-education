@@ -23,8 +23,20 @@ export const DataProvider = ({ children }) => {
     loadApiData();
   }, []);
 
+  // Función para agregar un video al estado global
+  const addVideo = (newVideo) => {
+    setData((prevData) => [...prevData, newVideo]);
+  };
+
+  // Función para quitar un video del estado global
+  const removeVideo = (videoId) => {
+    setData((prevData) => prevData.filter((video) => video.id !== videoId));
+  };
+
   return (
-    <DataContext.Provider value={{ data, loading, error }}>
+    <DataContext.Provider
+      value={{ data, loading, error, addVideo, removeVideo }}
+    >
       {children}
     </DataContext.Provider>
   );

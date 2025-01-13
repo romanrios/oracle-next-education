@@ -10,3 +10,19 @@ main {
   flex: 1;
   background-color: var(--grey);
 }
+
+.swal2-popup {
+  font-family: Roboto, sans-serif;
+
+  .panel {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  .panel-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+}
