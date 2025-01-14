@@ -94,14 +94,48 @@ export const showConfirmationAlertPreview = async (
   return result.isConfirmed;
 };
 
-export const showEdit = async (id) => {
+export const showEdit = async (item) => {
   const result = await Swal.fire({
-    title: "Editar Video",
-    html: `<div>HTML Content - Edit Video ${id}</div>`,
-    icon: "info",
+    title: "EDITAR CARD:",
+    html: `<div>
+      <label>Título</label>
+      <input id="tituloInput" value="${item.titulo}"/>    
+
+      <label>Categoría</label>
+      <select id="categoriaSelect">
+        <option value="Front End">Front End</option>
+        <option value="Back End">Back End</option>
+        <option value="Innovación y Gestión">Innovación y Gestión</option>
+      </select>    
+
+      <label>Imagen</label>
+      <input id="imagenInput" value="${item.imagen}"/>    
+
+      <label>Video</label>
+      <input id="videoInput" value="${item.video}"/>    
+
+      <label>Descripción</label>
+      <textarea id="descripcionTextarea" rows="6">${item.descripcion}</textarea>   
+    </div>`,
+    // icon: "info",
     showCancelButton: true,
-    confirmButtonText: "Sí",
-    cancelButtonText: "No",
+    confirmButtonText: "GUARDAR",
+    cancelButtonText: "CANCELAR",
+    customClass: "swal-edit",
+    showCloseButton: true,
+    didOpen: () => {
+      const selectElement = document.getElementById("categoriaSelect");
+      selectElement.value = item.categoria;
+    },
+    preConfirm: () => {
+      return {
+        titulo: document.getElementById("tituloInput").value,
+        categoria: document.getElementById("categoriaSelect").value,
+        imagen: document.getElementById("imagenInput").value,
+        video: document.getElementById("videoInput").value,
+        descripcion: document.getElementById("descripcionTextarea").value,
+      };
+    },
   });
-  return result.isConfirmed;
+  return result;
 };

@@ -58,7 +58,7 @@
   max-width: 600px;
 }
 
-.Banner_info h2 {
+/* .Banner_info h2 {
   max-width: fit-content;
   font-size: 48px;
   font-weight: 800;
@@ -66,6 +66,11 @@
   padding: 24px;
   border-radius: 15px;
   margin-bottom: 40px;
+} */
+
+.Banner .logo {
+  max-width: 260px;
+  margin-bottom: 20px;
 }
 
 .Banner_info h3 {
@@ -76,4 +81,5 @@
 .Banner_info p {
   font-size: 16px;
   font-weight: 300;
+  line-height: 130%;
 }

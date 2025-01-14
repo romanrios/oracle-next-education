@@ -7,7 +7,7 @@ import DataContext from "../context/context";
 import { motion } from "motion/react";
 import Swal from "sweetalert2";
 import { useState } from "react";
-import { deleteData } from "../services/services";
+import { deleteData, editData } from "../services/services";
 import {
   showSuccessAlert,
   showErrorAlert,
@@ -16,7 +16,7 @@ import {
 } from "../utils/alerts";
 
 const CardsGroup = (props) => {
-  const { data, removeVideo } = useContext(DataContext);
+  const { data, removeVideo, editVideo } = useContext(DataContext);
   const [startPos, setStartPos] = useState({ x: 0, y: 0 });
 
   const responsive = {
@@ -82,6 +82,36 @@ const CardsGroup = (props) => {
     }
   };
 
+  const handleEdit = async (item) => {
+    try {
+      const result = await showEdit(item);
+
+      if (!result.isConfirmed) {
+        return; // Si el usuario cancela, salir
+      }
+      if (item.id < 17) {
+        showErrorAlert("El administrador no permite la edición de este video.");
+        return; // Salir de la función
+      }
+      const updatedItem = {
+        ...item,
+        titulo: result.value.titulo,
+        categoria: result.value.categoria,
+        imagen: result.value.imagen,
+        video: result.value.video,
+        descripcion: result.value.descripcion,
+      };
+      await editData(updatedItem);
+      editVideo(updatedItem);
+      showSuccessAlert("El video ha sido editado correctamente.");
+    } catch (error) {
+      showErrorAlert(
+        "Hubo un problema al editar el video. Inténtalo nuevamente. Error: " +
+          error
+      );
+    }
+  };
+
   const filteredData = data.filter(
     (item) => item.categoria.toLowerCase() === props.title.toLowerCase()
   );
@@ -100,6 +130,7 @@ const CardsGroup = (props) => {
       <Carousel responsive={responsive} infinite={true} itemClass="card-item">
         {filteredData.map((item) => (
           <Card
+            item={item}
             color={props.color}
             key={item.id}
             id={item.id}
@@ -108,6 +139,7 @@ const CardsGroup = (props) => {
             handlePlay={handlePlay}
             handleMouseDown={handleMouseDown}
             handleDelete={handleDelete}
+            handleEdit={handleEdit}
           />
         ))}
       </Carousel>

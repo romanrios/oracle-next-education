@@ -1,9 +1,15 @@
 .Card {
   border-radius: 15px;
-  border: solid;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  border: solid;
+  scale: 0.97;
+  transition: scale 0.2s;
+
+  &:hover {
+    scale: 1;
+  }
 
   img {
     aspect-ratio: 16/9;

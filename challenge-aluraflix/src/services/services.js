@@ -34,3 +34,12 @@ export const deleteData = async (id) => {
     throw error;
   }
 };
+
+export const editData = async (data) => {
+  try {
+    const response = await apiClient.put(`/${data.id}`, data);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};

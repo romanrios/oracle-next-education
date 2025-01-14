@@ -1,13 +1,15 @@
 import "../css/Header.css";
 import Button from "./Button";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const logo = "./assets/romanflix.svg";
 
 const Header = () => {
   return (
     <header className="Header">
-      <img src={logo} alt="Logo Aluraflix" />
+      <Link to="/">
+        <img src={logo} alt="Logo Aluraflix" />
+      </Link>
       <ul>
         <NavLink
           to="/"

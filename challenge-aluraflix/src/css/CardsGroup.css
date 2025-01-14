@@ -15,7 +15,7 @@
   }
 
   .card-item {
-    padding: 0 5px;
+    padding: 0 3px;
   }
 }
 
@@ -60,5 +60,69 @@
 @media (min-width: 900px) {
   .swal-popup {
     max-width: 60vw;
+  }
+}
+
+/* ------- SWAL EDIT --------- */
+
+.swal-edit {
+  border: solid 3px var(--frontend);
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #03122f;
+  .swal2-title {
+    color: var(--blue);
+    font-weight: 800 !important;
+    text-align: left;
+    margin-top: 20px;
+    font-size: 40px;
+    padding-left: 28px;
+  }
+  .swal2-html-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: #03122f;
+    color: white;
+    font-family: "Source Sans 3", serif;
+    label {
+      display: block;
+      width: 100%;
+      margin: 35px 0 5px 0;
+    }
+    input,
+    textarea,
+    select {
+      color: white;
+      width: 100%;
+      border: 3px var(--blue) solid;
+      border-radius: 5px;
+      padding: 10px;
+      background-color: #03122f;
+    }
+    textarea {
+      resize: none;
+    }
+  }
+  .swal2-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 28px 20px 28px;
+    width: 100%;
+    button {
+      font-family: "Source Sans 3", serif;
+      font-weight: 700;
+      border: white 2px solid;
+      background-color: transparent;
+      padding: 12px 28px;
+      border-radius: 10px;
+      opacity: 0.8;
+    }
+    button:hover {
+      opacity: 1;
+    }
+    button:first-of-type {
+      background-color: var(--blue);
+    }
   }
 }

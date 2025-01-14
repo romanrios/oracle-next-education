@@ -7,7 +7,12 @@ const Banner = () => {
   return (
     <section className="Banner" style={{ backgroundImage: `url(${banner})` }}>
       <div className="Banner_info">
-        <h2>FRONT END</h2>
+        {/* <h2>FRONT END</h2> */}
+        <img
+          src="./assets/romanflix.svg"
+          alt="Romanflix Logo"
+          className="logo"
+        />
         <h3>Challenge React</h3>
         <p>
           Este challenge es una forma de aprendizaje. Es un mecanismo donde

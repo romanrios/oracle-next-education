@@ -12,7 +12,8 @@ export const DataProvider = ({ children }) => {
     const loadApiData = async () => {
       try {
         const apiData = await fetchData("/");
-        setData(apiData);
+        const sortedData = apiData.sort((a, b) => b.id - a.id);
+        setData(sortedData);
         setLoading(false);
       } catch (error) {
         setError(error);
@@ -33,9 +34,18 @@ export const DataProvider = ({ children }) => {
     setData((prevData) => prevData.filter((video) => video.id !== videoId));
   };
 
+  // Función para editar un video en el estado global
+  const editVideo = (updatedVideo) => {
+    setData((prevData) =>
+      prevData.map((video) =>
+        video.id === updatedVideo.id ? updatedVideo : video
+      )
+    );
+  };
+
   return (
     <DataContext.Provider
-      value={{ data, loading, error, addVideo, removeVideo }}
+      value={{ data, loading, error, addVideo, removeVideo, editVideo }}
     >
       {children}
     </DataContext.Provider>

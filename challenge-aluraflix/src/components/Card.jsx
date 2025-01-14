@@ -15,7 +15,7 @@ const Card = (props) => {
           <RiDeleteBin2Line />
           <p>BORRAR</p>
         </button>
-        <button>
+        <button onClick={() => props.handleEdit(props.item)}>
           <RiEditLine />
           <p>EDITAR</p>
         </button>
