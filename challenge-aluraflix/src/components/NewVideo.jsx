@@ -124,7 +124,7 @@ const NewVideo = () => {
                 placeholder="Ingrese el enlace de la imagen"
               />
               <div className="sub-text">
-                Formato miniaturas de YouTube:
+                Ejemplo:
                 https://img.youtube.com/vi/CODIGO_DEL_VIDEO/hqdefault.jpg
               </div>
               <ErrorMessage name="imagen" component="div" className="error" />
@@ -133,6 +133,9 @@ const NewVideo = () => {
             <div className="TextInput">
               <label>Video</label>
               <Field name="video" placeholder="Ingrese el enlace del video" />
+              <div className="sub-text">
+                Ejemplo: https://www.youtube.com/watch?v=CODIGO_DEL_VIDEO
+              </div>
               <ErrorMessage name="video" component="div" className="error" />
             </div>
 

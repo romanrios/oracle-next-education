@@ -1,5 +1,5 @@
 .Footer {
-  height: 125px;
+  padding: 30px;
   background: var(--darkblue);
   display: flex;
   flex-direction: column;
@@ -11,5 +11,21 @@
   box-shadow: 0 -5px 29px rgba(34, 113, 209, 0.7);
   img {
     width: 168.45px;
+    cursor: pointer;
+    transition: filter 0.5s;
+  }
+  img:hover {
+    filter: drop-shadow(0 0 8px var(--blue));
+  }
+  .Footer_icons_container {
+    font-size: 20px;
+    display: flex;
+    gap: 20px;
+    a {
+      opacity: 0.7;
+    }
+    a:hover {
+      opacity: 1;
+    }
   }
 }
