@@ -1,6 +1,6 @@
 .Banner {
   width: 100%;
-  height: 707px;
+  min-height: 600px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -10,76 +10,101 @@
   position: relative; /* Necesario para los pseudo-elementos */
   z-index: 1; /* Para asegurarte de que el contenido esté sobre el gradiente */
   flex-wrap: wrap; /* temp? */
-  padding: 0 15px;
-}
+  padding: 40px 15px 80px 15px;
+  gap: 20px;
 
-.Banner::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, #19191900 50%, #191919 100%);
-  z-index: -1; /* Coloca el gradiente detrás del contenido de .Banner */
-  pointer-events: none; /* El gradiente no bloqueará la interacción */
-}
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #19191900 -50%, #191919 100%);
+    z-index: -1; /* Coloca el gradiente detrás del contenido de .Banner */
+    pointer-events: none; /* El gradiente no bloqueará la interacción */
+  }
 
-.Banner_img_container {
-  height: 333px;
-  border-radius: 15px;
-  border: 5px solid var(--frontend);
-  overflow: hidden;
-  position: relative;
-}
+  .logo {
+    max-width: 130px;
+    margin-bottom: 20px;
+    animation: rotateLogo 12s linear infinite; /* Añadido para la animación */
+  }
 
-.Banner_img_container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  box-shadow: inset 0 0 17px 8px var(--frontend);
-  z-index: 1;
-  pointer-events: none;
-}
+  @keyframes rotateLogo {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 
-.Banner_img_container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  position: relative;
-  z-index: 0;
-}
+  .Banner_img_container {
+    border-radius: 15px;
+    border: 5px solid var(--frontend);
+    overflow: hidden;
+    position: relative;
+    transition: scale 0.2s ease-in-out;
+    cursor: pointer;
+  }
 
-.Banner_info {
-  max-width: 600px;
-}
+  .Banner_img_container:hover {
+    scale: 1.02;
+  }
 
-/* .Banner_info h2 {
-  max-width: fit-content;
-  font-size: 48px;
-  font-weight: 800;
-  background-color: var(--frontend);
-  padding: 24px;
-  border-radius: 15px;
-  margin-bottom: 40px;
-} */
+  .Banner_img_container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+    box-shadow: inset 0 0 20px 1px var(--frontend);
+  }
 
-.Banner .logo {
-  max-width: 260px;
-  margin-bottom: 20px;
-}
+  .Banner_img_container img {
+    max-width: 450px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    aspect-ratio: 16/9;
+    z-index: 0;
+  }
 
-.Banner_info h3 {
-  font-size: 46px;
-  margin-bottom: 9px;
-}
+  .Banner_info {
+    max-width: 500px;
+  }
 
-.Banner_info p {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 130%;
+  .Banner_info h2 {
+    max-width: fit-content;
+    font-size: 24px;
+    font-weight: 800;
+    background-color: var(--frontend);
+    padding: 12px 32px;
+    border-radius: 12px;
+    margin-bottom: 28px;
+  }
+
+  .Banner_info h3 {
+    font-size: 46px;
+    margin-bottom: 18px;
+  }
+
+  .Banner_info p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 130%;
+  }
+
+  @media (max-width: 768px) {
+    & {
+      padding-top: 70px;
+      margin-bottom: 70px;
+    }
+  }
 }

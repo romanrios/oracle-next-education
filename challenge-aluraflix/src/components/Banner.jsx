@@ -1,23 +1,20 @@
 import "../css/Banner.css";
 
 const banner = "./assets/banner.png";
-const video_cover = "./assets/video_cover.png";
+const video_cover = "https://img.youtube.com/vi/MnBNPA45NW8/sddefault.jpg";
 
 const Banner = () => {
   return (
     <section className="Banner" style={{ backgroundImage: `url(${banner})` }}>
       <div className="Banner_info">
-        {/* <h2>FRONT END</h2> */}
-        <img
-          src="./assets/romanflix.svg"
-          alt="Romanflix Logo"
-          className="logo"
-        />
-        <h3>Challenge React</h3>
+        <h2>FRONT END</h2>
+        <h3>¿Por qué utilizar React?</h3>
         <p>
-          Este challenge es una forma de aprendizaje. Es un mecanismo donde
-          podrás comprometerte en la resolución de un problema para poder
-          aplicar todos los conocimientos adquiridos en la formación React.
+          En el Alura.tips de hoy platicaremos con Harland Lohora, instructor
+          Front End en la plataforma de Alura Latam, sobre la librería JS de
+          React. Harland nos comentará como surgió React, por que utilizarlo y
+          por que se tornó una librería tan importante en el desarrollo
+          front-end.
         </p>
       </div>
       <div className="Banner_img_container">
