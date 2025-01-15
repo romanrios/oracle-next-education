@@ -1,9 +1,9 @@
 import "../css/CardsGroup.css";
+import React, { useContext } from "react";
+import DataContext from "../context/context";
 import Card from "./Card";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import React, { useContext } from "react";
-import DataContext from "../context/context";
 import { motion } from "motion/react";
 import Swal from "sweetalert2";
 import { useState } from "react";
