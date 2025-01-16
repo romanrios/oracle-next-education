@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <footer className="Footer">
       <img src={logo} alt="Logo Aluraflix" onClick={scrollToTop} />
-      <p>Desarrollado por Román Ríos</p>
+      <p className="no-select">Desarrollado por Román Ríos</p>
       <div className="Footer_icons_container">
         <a
           href="https://www.linkedin.com/in/romanrios/"

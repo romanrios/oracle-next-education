@@ -3,6 +3,7 @@ import { useContext } from "react";
 import DataContext from "../context/context";
 import Swal from "sweetalert2";
 import Carousel from "react-multi-carousel";
+import { useState } from "react";
 
 const responsive = {
   desktop: {
@@ -13,16 +14,30 @@ const responsive = {
 
 const Banner = () => {
   const { data } = useContext(DataContext);
+  const [startPos, setStartPos] = useState({ x: 0, y: 0 });
 
-  const handlePlay = (videoUrl) => {
-    const embedUrl = videoUrl.replace("watch?v=", "embed/");
-    Swal.fire({
-      html: `<div class="video-container"><iframe src="${embedUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`,
-      showCloseButton: true,
-      customClass: "swal-popup",
-      showConfirmButton: false,
-    });
+  const handleMouseDown = (e) => {
+    setStartPos({ x: e.clientX, y: e.clientY });
   };
+
+  const handlePlay = (e, videoUrl) => {
+    const endPos = { x: e.clientX, y: e.clientY };
+    const distance = Math.sqrt(
+      (endPos.x - startPos.x) ** 2 + (endPos.y - startPos.y) ** 2
+    ); // Solo dispara el click si el arrastre es pequeño (umbral de 5 píxeles)
+    if (distance < 5) {
+      const embedUrl = videoUrl.replace("watch?v=", "embed/");
+      Swal.fire({
+        html: `<div class="video-container"><iframe src="${embedUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`,
+        showCloseButton: true,
+        customClass: "swal-popup",
+        showConfirmButton: false,
+      });
+    }
+  };
+
+  // Ordena los datos por ID de forma descendente y toma los primeros 10 elementos
+  const lastData = [...data].sort((a, b) => b.id - a.id).slice(0, 18);
 
   return (
     <Carousel
@@ -31,8 +46,10 @@ const Banner = () => {
       responsive={responsive}
       infinite={true}
       itemClass="card-item"
+      arrows={false}
+      showDots={true}
     >
-      {data.map((item) => (
+      {lastData.map((item) => (
         <section
           key={item.id}
           className="Banner"
@@ -40,6 +57,7 @@ const Banner = () => {
         >
           <div className="Banner_info">
             <h2
+              className="no-select"
               style={{
                 backgroundColor:
                   item.categoria == "Front End"
@@ -51,11 +69,12 @@ const Banner = () => {
             >
               {item.categoria}
             </h2>
-            <h3>{item.titulo}</h3>
-            <p>{item.descripcion}</p>
+            <h3 className="no-select">{item.titulo}</h3>
+            <p className="no-select">{item.descripcion}</p>
           </div>
           <div
-            onClick={() => handlePlay(item.video)}
+            onClick={(e) => handlePlay(e, item.video)}
+            onMouseDown={handleMouseDown}
             className="Banner_img_container"
             style={{
               borderColor:

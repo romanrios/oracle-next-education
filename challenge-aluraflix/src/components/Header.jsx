@@ -11,9 +11,9 @@ const Header = () => {
   return (
     <header className="Header">
       <div className="Header_container">
-        <Link to="/">
+        <Link to="/" className="no-select">
           <img
-            className="Header_logo_full"
+            className="Header_logo_full no-select"
             src={logo_full}
             alt="Logo Romanflix"
           />
