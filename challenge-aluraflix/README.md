@@ -12,7 +12,9 @@ Desarrollador: Román Ríos
 
 ## 📄 Descripción del Proyecto
 
-**Romanflix** es una aplicación responsive desarrollada con React, diseñada para que los usuarios puedan visualizar, crear, editar y eliminar videos organizados en categorías.
+**Romanflix** es una aplicación responsive desarrollada con React que permite a los usuarios visualizar, crear, editar y eliminar videos organizados en categorías.
+
+Este desafío, parte del programa ONE, tiene como objetivo consolidar conocimientos en React y desarrollo front end a través de la creación de una plataforma funcional y práctica.
 
 ## ⚙ Tecnologías Utilizadas
 
