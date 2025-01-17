@@ -6,7 +6,7 @@ Desarrollador: Román Ríos
 
 ![Mockup de Romanflix](https://raw.githubusercontent.com/romanrios/oracle-next-education/refs/heads/main/challenge-aluraflix/mockup.png)
 
-🌐 Acceder al Sitio en GitHub Pages
+## 🌐 Acceder al Sitio en GitHub Pages
 
 [![Ver Sitio en GitHub Pages](https://img.shields.io/badge/-Visitar_Sitio_Web-28a745?style=for-the-badge&logo=github&logoColor=white)](https://romanrios.github.io/oracle-next-education/challenge-aluraflix/dist)
 
