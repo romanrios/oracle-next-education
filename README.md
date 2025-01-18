@@ -40,3 +40,4 @@ Proyectos y ejercicios del programa de tecnología y empleabilidad ONE de Oracle
 | react-spaceapp            | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/react-spaceapp)            | [Visitar](https://romanrios.github.io/oracle-next-education/react-spaceapp/dist)            |
 | react-function-components | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/react-function-components) | [Visitar](https://romanrios.github.io/oracle-next-education/react-function-components/dist) |
 | react-aluracinema         | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/react-aluracinema)         | [Visitar](https://romanrios.github.io/oracle-next-education/react-aluracinema/dist)         |
+| challenge-aluraflix         | [Ver](https://github.com/romanrios/oracle-next-education/tree/main/challenge-aluraflix)         | [Visitar](https://romanrios.github.io/oracle-next-education/challenge-aluraflix/dist)         |
