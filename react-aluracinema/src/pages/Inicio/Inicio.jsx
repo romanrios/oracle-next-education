@@ -9,9 +9,7 @@ function Inicio() {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    fetch(
-      "https://my-json-server.typicode.com/romanrios/oracle-next-education/react-aluracinema/"
-    )
+    fetch("https://6759e26f099e3090dbe33820.mockapi.io/romanflix")
       .then((response) => response.json())
       .then((data) => setVideos(data))
       .catch((error) => console.error("Error fetching videos:", error));
