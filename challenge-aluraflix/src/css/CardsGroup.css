@@ -160,4 +160,8 @@ div:where(.swal2-container).swal2-noanimation {
       background-color: var(--blue);
     }
   }
+  .swal2-validation-message {
+    background-color: #03122f;
+    color: white;
+  }
 }

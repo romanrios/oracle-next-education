@@ -69,7 +69,7 @@ export const showConfirmationAlertPreview = async (
         </div>
         <div class="panel">
           <h3 class="panel-title">Imagen</h3>
-          <img src="${imagen}" alt="Vista previa de la imagen" style="width: 100%; max-width: 300px; margin-bottom: 10px;" />
+          <img src="${imagen}" alt="Vista previa de la imagen" style="width: 100%; max-width: 300px; margin-bottom: 10px; display: block; margin-left: auto; margin-right: auto; aspect-ratio: 16/9; object-fit: cover;" />
         </div>
         <div class="panel">
           <h3 class="panel-title">Video</h3>
@@ -138,8 +138,15 @@ export const showEdit = async (item) => {
     },
     preConfirm: () => {
       const form = document.getElementById("editForm");
+      const videoInput = document.getElementById("videoInput").value.trim();
+
       if (!form.checkValidity()) {
         form.reportValidity(); // Muestra los mensajes nativos de validación del navegador.
+        return false;
+      }
+
+      if (!videoInput.includes("youtube.com")) {
+        Swal.showValidationMessage("El enlace del video debe ser de YouTube.");
         return false;
       }
 
@@ -147,7 +154,7 @@ export const showEdit = async (item) => {
         titulo: document.getElementById("tituloInput").value.trim(),
         categoria: document.getElementById("categoriaSelect").value,
         imagen: document.getElementById("imagenInput").value.trim(),
-        video: document.getElementById("videoInput").value.trim(),
+        video: videoInput,
         descripcion: document
           .getElementById("descripcionTextarea")
           .value.trim(),

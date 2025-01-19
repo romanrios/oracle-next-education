@@ -28,7 +28,10 @@ const validationSchema = Yup.object().shape({
   video: Yup.string()
     .required("El enlace del video es obligatorio.")
     .url("Debe ser un enlace válido.")
-    .max(1000, "Exceso de caracteres"),
+    .max(1000, "Exceso de caracteres")
+    .test("youtube-url", "El enlace debe ser de YouTube.", (value) => {
+      return value && value.includes("youtube.com");
+    }),
   descripcion: Yup.string()
     .required("La descripción es obligatoria.")
     .max(500, "La descripción no puede tener más de 500 caracteres."),
