@@ -97,27 +97,36 @@ export const showConfirmationAlertPreview = async (
 export const showEdit = async (item) => {
   const result = await Swal.fire({
     title: "EDITAR CARD:",
-    html: `<div>
-      <label>Título</label>
-      <input id="tituloInput" value="${item.titulo}"/>    
+    html: `<form id="editForm">
+      <div>
+        <label for="tituloInput">Título</label>
+        <input id="tituloInput" name="titulo" value="${item.titulo}" maxlength="100" required/>    
+      </div>
 
-      <label>Categoría</label>
-      <select id="categoriaSelect">
-        <option value="Front End">Front End</option>
-        <option value="Back End">Back End</option>
-        <option value="Innovación y Gestión">Innovación y Gestión</option>
-      </select>    
+      <div>
+        <label for="categoriaSelect">Categoría</label>
+        <select id="categoriaSelect" name="categoria" required>
+          <option value="Front End">Front End</option>
+          <option value="Back End">Back End</option>
+          <option value="Innovación y Gestión">Innovación y Gestión</option>
+        </select>    
+      </div>
 
-      <label>Imagen</label>
-      <input id="imagenInput" value="${item.imagen}"/>    
+      <div>
+        <label for="imagenInput">Imagen</label>
+        <input id="imagenInput" name="imagen" value="${item.imagen}" type="url" maxlength="1000" required/>    
+      </div>
 
-      <label>Video</label>
-      <input id="videoInput" value="${item.video}"/>    
+      <div>
+        <label for="videoInput">Video</label>
+        <input id="videoInput" name="video" value="${item.video}" type="url" maxlength="1000" required/>    
+      </div>
 
-      <label>Descripción</label>
-      <textarea id="descripcionTextarea" rows="6">${item.descripcion}</textarea>   
-    </div>`,
-    // icon: "info",
+      <div>
+        <label for="descripcionTextarea">Descripción</label>
+        <textarea id="descripcionTextarea" name="descripcion" rows="6" maxlength="500" required>${item.descripcion}</textarea>   
+      </div>
+    </form>`,
     showCancelButton: true,
     confirmButtonText: "GUARDAR",
     cancelButtonText: "CANCELAR",
@@ -128,12 +137,20 @@ export const showEdit = async (item) => {
       selectElement.value = item.categoria;
     },
     preConfirm: () => {
+      const form = document.getElementById("editForm");
+      if (!form.checkValidity()) {
+        form.reportValidity(); // Muestra los mensajes nativos de validación del navegador.
+        return false;
+      }
+
       return {
-        titulo: document.getElementById("tituloInput").value,
+        titulo: document.getElementById("tituloInput").value.trim(),
         categoria: document.getElementById("categoriaSelect").value,
-        imagen: document.getElementById("imagenInput").value,
-        video: document.getElementById("videoInput").value,
-        descripcion: document.getElementById("descripcionTextarea").value,
+        imagen: document.getElementById("imagenInput").value.trim(),
+        video: document.getElementById("videoInput").value.trim(),
+        descripcion: document
+          .getElementById("descripcionTextarea")
+          .value.trim(),
       };
     },
   });

@@ -5,7 +5,6 @@ import Card from "./Card";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { motion } from "motion/react";
-import Swal from "sweetalert2";
 import { useState } from "react";
 import { deleteData, editData } from "../services/services";
 import {
@@ -14,6 +13,7 @@ import {
   showConfirmationAlert,
   showEdit,
 } from "../utils/alerts";
+import { handlePlay } from "../utils/videoUtils";
 
 const CardsGroup = (props) => {
   const { data, removeVideo, editVideo } = useContext(DataContext);
@@ -40,22 +40,6 @@ const CardsGroup = (props) => {
 
   const handleMouseDown = (e) => {
     setStartPos({ x: e.clientX, y: e.clientY });
-  };
-
-  const handlePlay = (e, videoUrl) => {
-    const endPos = { x: e.clientX, y: e.clientY };
-    const distance = Math.sqrt(
-      (endPos.x - startPos.x) ** 2 + (endPos.y - startPos.y) ** 2
-    ); // Solo dispara el click si el arrastre es pequeño (umbral de 5 píxeles)
-    if (distance < 5) {
-      const embedUrl = videoUrl.replace("watch?v=", "embed/");
-      Swal.fire({
-        html: `<div class="video-container"><iframe src="${embedUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`,
-        showCloseButton: true,
-        customClass: "swal-popup",
-        showConfirmButton: false,
-      });
-    }
   };
 
   const handleDelete = async (videoId) => {
@@ -140,6 +124,7 @@ const CardsGroup = (props) => {
             handleMouseDown={handleMouseDown}
             handleDelete={handleDelete}
             handleEdit={handleEdit}
+            startPos={startPos}
           />
         ))}
       </Carousel>

@@ -1,9 +1,9 @@
 import "../css/Banner.css";
 import { useContext } from "react";
 import DataContext from "../context/context";
-import Swal from "sweetalert2";
 import Carousel from "react-multi-carousel";
 import { useState } from "react";
+import { handlePlay } from "../utils/videoUtils";
 
 const responsive = {
   desktop: {
@@ -15,33 +15,18 @@ const responsive = {
 const Banner = () => {
   const { data } = useContext(DataContext);
   const [startPos, setStartPos] = useState({ x: 0, y: 0 });
+  const [autoplay, setAutoplay] = useState(true);
 
   const handleMouseDown = (e) => {
     setStartPos({ x: e.clientX, y: e.clientY });
   };
 
-  const handlePlay = (e, videoUrl) => {
-    const endPos = { x: e.clientX, y: e.clientY };
-    const distance = Math.sqrt(
-      (endPos.x - startPos.x) ** 2 + (endPos.y - startPos.y) ** 2
-    ); // Solo dispara el click si el arrastre es pequeño (umbral de 5 píxeles)
-    if (distance < 5) {
-      const embedUrl = videoUrl.replace("watch?v=", "embed/");
-      Swal.fire({
-        html: `<div class="video-container"><iframe src="${embedUrl}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>`,
-        showCloseButton: true,
-        customClass: "swal-popup",
-        showConfirmButton: false,
-      });
-    }
-  };
-
-  // Ordena los datos por ID de forma descendente y toma los primeros 10 elementos
+  // Ordena los datos por ID de forma descendente y toma los primeros 18 elementos
   const lastData = [...data].sort((a, b) => b.id - a.id).slice(0, 18);
 
   return (
     <Carousel
-      autoPlay={true}
+      autoPlay={autoplay}
       autoPlaySpeed={5000}
       responsive={responsive}
       infinite={true}
@@ -73,7 +58,7 @@ const Banner = () => {
             <p className="no-select">{item.descripcion}</p>
           </div>
           <div
-            onClick={(e) => handlePlay(e, item.video)}
+            onClick={(e) => handlePlay(e, item, startPos)}
             onMouseDown={handleMouseDown}
             className="Banner_img_container"
             style={{
