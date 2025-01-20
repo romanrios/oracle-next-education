@@ -16,27 +16,31 @@ Desarrollador: Román Ríos
 
 Este desafío, parte del programa ONE, tiene como objetivo consolidar conocimientos en React y desarrollo front end a través de la creación de una plataforma funcional y práctica.
 
-## ⚙ Tecnologías Utilizadas
+## ⚙ **Tecnologías y Librerías Utilizadas**
 
-### 🌐 Frontend
+### Base
+
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-### 🌎 Backend
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
-![MockAPI](https://img.shields.io/badge/MockAPI-FF4081?style=for-the-badge&logo=mockapi&logoColor=white)
+### Librerías y Herramientas Adicionales
 
-### ⚡ Utilidades
-![React Multi Carousel](https://img.shields.io/badge/React%20Multi%20Carousel-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![SweetAlert2](https://img.shields.io/badge/SweetAlert2-8E24AA?style=for-the-badge&logo=sweetalert2&logoColor=white)
-![React Icons](https://img.shields.io/badge/React%20Icons-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Formik](https://img.shields.io/badge/Formik-FF9900?style=for-the-badge&logo=formik&logoColor=white)
-![Yup](https://img.shields.io/badge/Yup-764ABC?style=for-the-badge&logo=yup&logoColor=white)
-![Motion](https://img.shields.io/badge/Motion-000000?style=for-the-badge&logo=framer&logoColor=white)
+- **Axios**: Realiza solicitudes HTTP de forma sencilla.
+- **MockAPI**: Simula una API para desarrollo local.
+- **React Multi Carousel**: Implementa carruseles de contenido deslizables.
+- **SweetAlert2**: Crea alertas y modales interactivos.
+- **React Icons**: Proporciona iconos personalizables.
+- **Formik**: Facilita el manejo de formularios.
+- **Yup**: Realiza validaciones en formularios.
+- **Motion**: Añade animaciones suaves a la interfaz.
+
+
+
+
 
 
 
